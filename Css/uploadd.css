@@ -106,27 +106,27 @@ img {
 
 @font-face {
     font-family: roboto;
-    src: url(/fonts/roboto/Roboto-Bold.ttf);
+    src: url(../fonts/roboto/Roboto-Bold.ttf);
 }
 
 @font-face {
     font-family: action-jackson;
-    src: url(/fonts/actionJackson/actionj.ttf);
+    src: url(../fonts/actionJackson/actionj.ttf);
 }
 
 @font-face {
     font-family: bebas-neue;
-    src: url(/fonts/bebasNew/BebasNeue-Regular.ttf);
+    src: url(../fonts/bebasNew/BebasNeue-Regular.ttf);
 }
 
 @font-face {
     font-family: caviar-dreams;
-    src: url(/fonts/caviarDreams/CaviarDreams_Bold.ttf);
+    src: url(../fonts/caviarDreams/CaviarDreams_Bold.ttf);
 }
 
 @font-face {
     font-family: little-days;
-    src: url(/fonts/littleDays/Little\ days.ttf);
+    src: url(../fonts/littleDays/Little\ days.ttf);
 }
 
 #input_search_song, #input_search_song:focus {
