@@ -1,0 +1,47 @@
+.modal-dialog{
+    padding: 5%;
+}
+
+@media (max-width: 576px){
+    .modal-dialog{
+        padding: 10%
+    }
+}
+
+.number{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.upSong{
+    transform: rotateZ(-45deg);
+    color: aqua !important;
+}
+
+.constantSong{
+    color: yellowgreen !important;
+}
+
+.downSong{
+    transform: rotateZ(45deg);
+    color: red !important;
+}
+
+.features i{
+    position: relative;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.features i:hover{
+    color: gray;
+}
+
+.features i span{
+    color: #b8b8b8;
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: -10px;
+    left: 13px;
+}

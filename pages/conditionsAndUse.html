@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciberiuz</title>
+    <link rel="icon" href="../assets/logo.png">
+    <link rel="stylesheet" href="../Css/bootstrap.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" href="../Css/conditions.css">
+</head>
+
+<body>
+    <!-- Navbar PC view -->
+    <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark sticky-top" style="background-color: #393a34">
+        <div class="container-fluid pe-md-4 pe-lg-5">
+            <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/"><i
+                                class="fas fa-home d-sm-none d-lg-inline"></i>
+                            Inicio</a>
+                        <div class="activating_item"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i>
+                            Listas</a>
+                        <div class="activating_item"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html"><i class="fas fa-box-open d-sm-none d-lg-inline"></i>
+                            Paquetes</a>
+                        <div class="activating_item"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i>
+                            Artistas</a>
+                        <div class="activating_item"></div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div id="form" style="padding: 7px;">
+                        <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
+                        <i class="fa fa-search" style="padding: 7px;cursor: pointer;" id="btn_search"></i>
+                    </div>
+                    <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              ">
+                        <i class="fas fa-user" style="font-size: 1.6rem; color: white;"></i>
+                    </div>
+                    <div class="dropdown " style="padding: 7px;">
+                        <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                            @username
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                            <li><a class="dropdown-item" href="office.html">Compras</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            <li class="py-1"><hr class="dropdown-divider"></li>
+                    <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                       
+                        </ul>
+                    </div>
+                    <div style="color: white;padding: 7px;position: relative;" class="dropdown">
+                        <i class="fas fa-bell" style="cursor: pointer;" id="icon_notifications" tabindex="0"
+                            data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover"
+                            data-bs-html="true" data-bs-placement="bottom" data-bs-content=""
+                            title="Notificaciones"></i>
+
+                        <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
+                            9
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navbar Cell View -->
+    <nav class="navbar pb-0 d-block d-md-none sticky-top" style="background-color: #393a34">
+        <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2">
+            <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+
+            <!-- Searchfield -->
+            <div class="d-flex align-items-center">
+                <div id="form">
+                    <input type="text" class="form-input" placeholder="Buscar" />
+                    <i class="fa fa-search"></i>
+                </div>
+                <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              " class="dropdown position-relative" id="cell-view">
+                    <i class="fas fa-user" style="font-size: 1.6rem; color: white;" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view">
+                        <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                        <li><a class="dropdown-item" href="office.html">Compras</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        <li class="py-1"><hr class="dropdown-divider"></li>
+                <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                   
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sections -->
+        <ul id="sectionsCellView" class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-light w-100"
+            style="flex-direction: row">
+            <li class="nav-item me-4">
+                <a href="packages.html"><i class="fas fa-box-open" style="margin-left: 15px"></i></a>
+            </li>
+            <li class="nav-item me-4">
+                <a href="list.html"><i class="fas fa-music"></i></a>
+            </li>
+            </li>
+            <li class="nav-item me-4">
+                <a href="/"><i class="fas fa-home "></i></a>
+            </li>
+            <li class="nav-item me-4 position-relative">
+                <a href="notifications.html"> <i class="fas fa-bell"></i></a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    9
+                    <span class="visually-hidden"></span>
+                </span>
+            </li>
+            <li class="nav-item me-4">
+                <a href="artists.html"><i class="fas fa-user "></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Home -->
+    <div class="px-0 px-md-4 px-lg-5">
+        <div class="container-fluid  bg-white" style="height: max-content;">
+            <div class="row">
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <img src="../assets/logo.png" alt="" class="img-fluid ">
+                    <h1 class="text-center d-flex align-items-center" style="height: 100%;">
+                        T&eacute;rminos y condiciones de uso
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        Políticas de Privacidad
+                    </h1>
+                    <p>
+                        Ciberiuz respeta los derechos de privacidad de sus consumidores, por tanto:
+                        Los datos que la plataforma recopila como Teléfono, Nombre y Correo, no son entregados a 3ros.
+                        Solo datos como Edad, Provincia, genero, así como intereses dentro de la plataforma y las
+                        acciones que realices son usadas con el fin de desarrollar estrategias para los servicios de
+                        marketing que se ofrecen a empresas cubanas que nos lo soliciten y a los propios artistas. En
+                        caso de violación de derechos de autor o de lo establecido en los Términos y Condiciones de
+                        Ciberiuz nuestra empresa estará obligada a dar los datos requeridos por las entidades
+                        autorizadas para que desempeñen su labor de justicia en la medida de la gravedad de la
+                        violación. Las acciones que la plataforma empleara ante alguna violación también se encuentran
+                        reflejadas en nuestros Términos y Condiciones. Dichos datos quedan almacenados en la web también
+                        para ayudarnos a crear un servicio personalizado para cada usuario y con su pleno conocimiento.
+                    </p>
+                    <h1> Pasarela de pago</h1>
+                    <p>Los datos requeridos en el proceso de compra de nuestros servicios son usados para validar su
+                        identidad como usuario de la plataforma, crear una factura de compra donde consten los datos de
+                        la compra y algunos de estos como: Provincia, edad, sexo, cantidad de paquetes comprados y su
+                        recurrencia; son usados para realizar análisis estadísticos que nos permitan desarrollar
+                        estrategias empresariales y de marketing para llevarle un mejor servicio a los usuarios. Estos
+                        datos no son modificables dentro de la factura una vez realizada la compra.
+                    </p>
+                    <h1>
+                        Para Artistas
+                    </h1>
+                    <p>Los datos que le son solicitados al artista tienen al igual que los de los oyentes una finalidad
+                        de identificar y proporcionar un servicio más personalizado al cliente, estos datos no son
+                        cedidos a ninguna organización ni entidad. Datos como géneros que realizan, nombre de usuario,
+                        números de teléfono y correo son totalmente modificables el resto deberán ser solicitados al
+                        equipo de soporte los cuales mostrarán las dinámicas requeridas para efectuar el cambio. En caso
+                        de que el artista desee cerrar su cuenta dichos datos permanecerán en la base de datos. Para
+                        eliminar de forma definitiva su cuenta debe dirigirse a soporte donde se le dará un plazo de
+                        tiempo en el cual se realizará la eliminación de sus datos personales, registros de compras,
+                        canciones, álbumes, listas de reproducción y cancelación de contratos </p>
+                    <h1>
+                        Para Emprendedores
+                    </h1>
+                    <p>
+                        Se registran los datos de los titulares o representantes de las empresas que contratan nuestros
+                        servicios de marketing dentro de la plataforma para velar que sean entidades legales y
+                        autorizadas. Dichos datos también son almacenados en Ciberiuz y usados con fines estratégicos y
+                        de marketing. A estos clientes se les entregan determinados datos ofrecidos con el
+                        consentimiento de nuestros usuarios como parte del servicio de marketing que se les ofrece, bajo
+                        estricto juramento donde afirman no filtrarlos y usarlos estrictamente para desarrollar
+                        estrategias en su negocio. Dicho juramento es un contrato el cual es almacenado en la base de
+                        datos de la plataforma. En caso de filtración de datos de los usuarios de Ciberiuz por parte de
+                        alguna de estas entidades sus datos serán usados para identificar responsables y procesarlos
+                        legalmente. Los emprendedores no tendrán acceso a datos como correo Nombre o teléfono de los
+                        consumidores a menos de que estos accedan de forma voluntaria a los sitios web de los
+                        emprendedores mediante los enlaces que ellos publican en la plataforma; de esta forma evitamos
+                        que se invada su privacidad. Una vez el consumidor salga de nuestra página y acceda a la del
+                        emprendedor, no nos hacemos responsables de los datos personales que les ofrecen.
+                    </p>
+                    <h1>
+                        De carácter general.
+                    </h1>
+                    <p>
+                        Todo lo expresado en este documento es de máxima prioridad en el desarrollo de la plataforma. No
+                        se puede acceder a ella sin afirmar haber leído y estado de acuerdo con todo lo que aquí se
+                        plantea. Si un usuario salta este documento y accede a la plataforma sin leer las políticas de
+                        privacidad será considerado un hackeo lo cual será penado como se estipula en los términos y
+                        condiciones de Ciberiuz; a menos que se confirme su acceso debido a un fallo técnico de la
+                        plataforma, siempre que no haya sido ocasionado por el propio hackeo, usando cualquier tipo de
+                        herramienta programa o estrategia para dicho fin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="fixed-bottom py-2 px-4 text-dark">
+        <small style="font-weight: bold;">&copy;
+            <script>document.write(`${new Date().getFullYear()}`)</script> Ciberiuz <img src="../assets/logo.png" alt=""
+                width="25" height="25">
+        </small>
+    </footer>
+    <!-- Js -->
+    <script src="../Js/popper.min.js"></script>
+    <script src="../Js/bootstrap.js"></script>
+    <script src="../Js/jquery-3.5.1.js"></script>
+    <script src="../Js/js.cookie.min.js"></script>
+    <script src="../Js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            showNotifications("notifications.html");
+            $("#btn_search").click(function (e) {
+                alert("Has hecho click en buscar");
+            });
+        });
+    </script>
+</body>
+
+</html>

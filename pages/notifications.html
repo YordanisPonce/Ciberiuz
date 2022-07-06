@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciberiuz</title>
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="stylesheet" href="../Css/bootstrap.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
+  <link rel="stylesheet" href="../Css/main.css">
+  <link rel="stylesheet" href="../Css/notification.css">
+</head>
+
+<body>
+  <!-- Navbar PC view -->
+  <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark fixed-top" style="background-color: #393a34">
+    <div class="container-fluid pe-md-4 pe-lg-5">
+      <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home d-sm-none d-lg-inline"></i>
+              Inicio</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i> Listas</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html"><i class="fas fa-box-open d-sm-none d-lg-inline"></i> Paquetes</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i> Artistas</a>
+            <div class="activating_item"></div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div id="form" style="padding: 7px;">
+            <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
+            <i class="fa fa-search" style="padding: 7px;cursor: pointer;" id="btn_search"></i>
+          </div>
+          <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              ">
+            <i class="fas fa-user" style="font-size: 1.6rem; color: white;"></i>
+          </div>
+          <div class="dropdown " style="padding: 7px;">
+            <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false" style="text-decoration: none;">
+              @username
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+              <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+              <li><a class="dropdown-item" href="office.html">Compras</a></li>
+              <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+              <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+              <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              <li class="py-1"><hr class="dropdown-divider"></li>
+      <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+         
+            </ul>
+          </div>
+          <div style="color: white;padding: 7px;position: relative;" class="dropdown">
+            <i class="fas fa-bell" style="cursor: pointer;" id="icon_notifications" tabindex="0" data-bs-trigger="focus"
+              data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+              data-bs-content="" title="Notificaciones"></i>
+
+            <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
+              9
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Navbar Cell View -->
+  <nav class="navbar pb-0 d-block d-md-none sticky-top" style="background-color: #393a34">
+    <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2">
+      <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+
+      <!-- Searchfield -->
+      <div class="d-flex align-items-center">
+        <div id="form">
+          <input type="text" class="form-input" placeholder="Buscar" />
+          <i class="fa fa-search"></i>
+        </div>
+        <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              " class="dropdown position-relative" id="cell-view">
+                    <i class="fas fa-user" style="font-size: 1.6rem; color: white;" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view">
+                      <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                                <li><a class="dropdown-item" href="office.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                <li class="py-1"><hr class="dropdown-divider"></li>
+                        <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                           
+                    </ul>
+                </div>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <ul id="sectionsCellView" class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-light w-100"
+      style="flex-direction: row">
+      <li class="nav-item me-4">
+        <a href="packages.html"><i class="fas fa-box-open" style="margin-left: 15px"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="list.html"><i class="fas fa-music"></i></a>
+      </li>
+      </li>
+      <li class="nav-item me-4">
+        <a href="/"><i class="fas fa-home "></i></a>
+      </li>
+      <li class="nav-item me-4 position-relative">
+        <a href="notifications.html"> <i class="fas fa-bell activeCellSection"></i></a>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          9
+          <span class="visually-hidden"></span>
+        </span>
+      </li>
+      <li class="nav-item me-4">
+        <a href="artists.html"><i class="fas fa-user "></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Notifications section -->
+  <div class="px-0 px-md-4 px-lg-5">
+    <div class="container-fluid bg-white py-3 py-sm-0 py-md-0">
+
+      <!-- Vista para cuando no haya notificaciones -->
+      <!-- <div class="panel">
+        <div class="d-flex justify-content-center align-items-center whiteBackground h-100 mt-5 mt-sm-5 mt-md-0">
+          <div>
+            <div class="d-flex justify-content-center mb-2">
+              <i id="noNotifications" class="fa fa-bell" ></i>
+            </div>
+            <p style="color: #979696; font-size: 2.3rem;">Sin notificaciones</p>
+          </div>
+        </div>
+      </div> -->
+
+
+      <!-- Me quede aqui -->
+
+      <!-- Vista para cuando haya notificaciones -->
+      <div class="panel">
+        <h3 class="text-secondary d-none d-md-block">Notificaciones</h3>
+        <a href="notifications.html" class="row notification my-3 my-sm-1 my-sm-2">
+          <div class="col-2 col-sm-1 me-sm-4 me-md-2 me-lg-0 pt-sm-3 pt-md-0">
+            <img src="../assets/bad-bunny-gq-april-2019.jpg" class="fotoAvatarNotificacion"
+              alt="fotoAvatarNotificacion">
+          </div>
+          <div class="col-10 d-flex align-items-center">Tienes un nuevo suscriptor, toca para ver quien es.</div>
+        </a>
+        <a href="notifications.html" class="row notification my-3 my-sm-1 my-sm-2">
+          <div class="col-2 col-sm-1 me-sm-4 me-md-2 me-lg-0 pt-sm-3 pt-md-0">
+            <img src="../assets/bad-bunny-gq-april-2019.jpg" class="fotoAvatarNotificacion"
+              alt="fotoAvatarNotificacion">
+          </div>
+          <div class="col-10 d-flex align-items-center">Frank Alejandro ha subido un nuevo tema.</div>
+        </a>
+
+        <script>
+          for (let i = 0; i < 50; i++) {
+            document.write(`
+            <a href="notifications.html" class="row notification my-3 my-sm-1 my-sm-2">
+          <div class="col-2 col-sm-1 me-sm-4 me-md-2 me-lg-0 pt-sm-3 pt-md-0">
+            <img src="../assets/bad-bunny-gq-april-2019.jpg" class="fotoAvatarNotificacion" alt="fotoAvatarNotificacion">
+          </div>
+          <div class="col-10 d-flex align-items-center">Tienes un nuevo suscriptor, toca para ver quien es.</div>
+        </a>
+        <a href="notifications.html" class="row notification my-3 my-sm-1 my-sm-2">
+          <div class="col-2 col-sm-1 me-sm-4 me-md-2 me-lg-0 pt-sm-3 pt-md-0">
+            <img src="../assets/bad-bunny-gq-april-2019.jpg" class="fotoAvatarNotificacion" alt="fotoAvatarNotificacion">
+          </div>
+          <div class="col-10 d-flex align-items-center">Frank Alejandro ha subido un nuevo tema.</div>
+        </a>
+            
+            
+            `);
+
+          }
+        </script>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Js -->
+  <script src="../Js/popper.min.js"></script>
+  <script src="../Js/bootstrap.js"></script>
+  <script src="../Js/jquery-3.5.1.js"></script>
+  <script src="../Js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#btn_search").click(function (e) {
+        alert("Has hecho click en buscar");
+      });
+    });
+  </script>
+</body>
+
+</html>

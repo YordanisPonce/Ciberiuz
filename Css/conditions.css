@@ -1,0 +1,21 @@
+img.img-fluid {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+h1.text-center {
+    font-size: 35pt;
+    font-style: italic;
+}
+
+@media(max-width:768px) {
+    h1.text-center {
+        font-size: 28pt;
+    }
+}
+@media(max-width:576px) {
+    h1.text-center {
+        font-size: 22pt;
+    }
+}

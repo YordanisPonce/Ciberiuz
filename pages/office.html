@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberiuz</title>
+  <link rel="stylesheet" href="../Css/bootstrap.css" />
+  <link rel="stylesheet" href="../fontawesome/css/all.css" />
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <style>
+    #myChart {
+      max-height: 70vh !important;
+    }
+    .accordion{
+      border-radius: 10px;
+    }
+    .accordion, .accordion *, .accordion button{
+      color: rgb(216, 216, 216);
+      background-color: #393939;
+    }
+
+    
+    .accordion-item{
+      border: none;
+      border-bottom: 1px solid rgb(138, 138, 138);
+    }
+    .accordion-button:not(.collapsed){
+      background-color: #393939;
+      color: inherit;
+    } 
+    .accordion-button::after{
+      filter: brightness(0%) invert();
+    }
+    .accordion i{
+      font-size: 2rem; 
+      color: #44F8FC;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .accordion-body .col-4{
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+    .carousel-inner{
+      background-color: #393939;
+      border-radius: 10px;
+      padding:  0 12% ;
+      padding-top: 1.3cm;
+    }
+    .carousel-item > div{
+      display: flex;
+      margin: 0 5%;
+      justify-content: space-between;
+    } 
+    .carousel-item  i{
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      border: 2px solid white;
+      border-radius: 100%;
+      padding: 10px;
+    } 
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-light p-0 sticky-top bg-white mb-5">
+    <div class="navbar-dark w-100 d-flex justify-content-center align-items-center pb-0 px-4 border-bottom border-2">
+        <a class="navbar-brand position-absolute" style="left: 20px;" href="profile.html"> <i class="fa fa-angle-left text-dark"></i></a>
+        <div class="text-secondary" style="font-size: 1.2rem; font-weight: bold;">Estad&iacute;sticas</div>
+    </div>
+  </nav>
+
+  <div class="row justify-content-center mx-0">
+    <div class="col-11 col-sm-8 col-md-10 col-lg-3 mt-lg-5">
+      <div class="row justify-content-center ">
+        <div class="col-6 col-lg-12  mb-md-3">
+          <div class="card text-white" style="background-color: #393939; border-radius: 10px;">
+            <div class="card-body px-0">
+                <h2 class="text-center mb-0" style="font-weight: bold;">500</h2>
+                <div class="fw-bold text-center mb-4">Reproducciones</div>
+                <div class="text-center">10 rep/c</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-12 ">
+          <div class="card text-white" style="background-color: #393939; border-radius: 10px;">
+            <div class="card-body px-0">
+                <h2 class="text-center mb-0" style="font-weight: bold;">500</h2>
+                <div class="fw-bold text-center mb-4">Suscripciones</div>
+                <div class="text-center">10 sus/c</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 my-5">
+          <div>Canción más escuchada: <b>Falling Down</b></div>
+          <div>Likes por canción: <b>10/c</b></div>
+          <div>Compartidos: <b>10/c</b></div>
+          <div>Canciones publicadas: <b>100</b></div>
+        </div>
+      </div>
+    </div>
+    <hr class="dropdown-divider d-block d-sm-none mb-3">
+    <!-- ----------------------Chart---------------------- -->
+    <div class="col-12 col-lg-8">
+      <h3 class="text-center mb-4 d-lg-none">Estadísticas</h3>
+      <canvas id="myChart"></canvas>
+    </div>
+    <!-- -----------------------/Chart------------------------------- -->
+  </div>
+
+  <hr class="dropdown-divider d-block d-sm-none my-3">
+  <div class="row mx-0 px-1 mt-2 mt-sm-5 mb-5 justify-content-center">
+    <!-- ---------------------Municipios---------------------------- -->
+    <div class="col-12 col-sm-10 col-md-7 col-lg-6 mb-2">
+      <h3 class="text-center mb-2 fw-bold">Municipios</h3>
+          <!-- -------------------Acordion------------------- -->
+          <div class="accordion p-2" id="accordionExample">
+            <div class="accordion-item" >
+              <h2 class="accordion-header" id="headingOne">
+                <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <b>Vedado, La Habana - 100 sus</b>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="row justify-content-between">
+                    <div class="col-5">
+                      <p class="text-center fw-bold">Géneros</p>
+                      <div class="row">
+                        <div class="col-4">
+                          <div>
+                            <i class="fa fa-female"></i>
+                            <span>50</span>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div>
+                            <i class="fa fa-male" ></i>
+                             <span>50</span> 
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div>
+                            <i class="fa fa-question"></i>
+                            <span>50</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-5">
+                      <p class="text-center fw-bold">Edades</p>
+                      <div class="row">
+                        <div class="col-4">
+                          <div>
+                            <i class="fa fa-female"></i>
+                            <span>15-30</span>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div>
+                            <i class="fa fa-male"></i>
+                            <span>15-30</span>
+                          </div>                        
+                        </div>
+                        <div class="col-4">
+                          <div>
+                            <i class="fa fa-question"></i>
+                            <span>15-30</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <span style="font-size: .8rem;">Canción más escuchada</span>
+                    <div style="font-weight: bold; font-size: 1.7rem;">Falling Down</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <b>Vedado, La Habana - 100 sus</b>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <b>Vedado, La Habana - 100 sus</b>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -------------------/Acordion------------------- -->
+    </div>
+    <!-- ---------------------/Municipios-------------------------------->
+    <!-- -----------------Colaboartions----------------- -->
+    <div class="col-12 col-lg-6">
+      <h3 class="text-center mb-2 fw-bold">Posibles Colaboraciones</h3>
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item text-white active">
+            <div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User</p>
+              </div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User</p>
+              </div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-white">
+            <div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User2</p>
+              </div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User2</p>
+              </div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User2</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-white">
+            <div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User3</p>
+              </div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User3</p>
+              </div>
+              <div>
+                <i class="fa fa-user"></i>
+                <p class="text-center">User3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- -----------------------/Colaboartions------------------------------ -->
+    </div>
+  </div>
+  
+  <!-- JS -->
+  <script src="../Js/chart.js"></script>
+  <script src="../Js/popper.min.js"></script>
+  <script src="../Js/bootstrap.js"></script>
+  <!-- Graphic config -->
+  <script>
+    const ctx = document.getElementById("myChart");
+    const myChart = new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: [
+          "Habana",
+          "Matanzas",
+          "Holguín",
+          "Camaguey",
+          "Santiago de Cuba",
+        ],
+        datasets: [
+          {
+            label: "# of Votes",
+            data: [8, 19, 10, 90, 50],
+            backgroundColor: [
+              "rgba(40,144,152,0.6)",
+              "rgba(120,244,152,0.6)",
+              "rgba(40,244,152,0.6)",
+              "rgba(140,144,152,0.6)",
+              "rgba(40,144,252,0.6)",
+            ],
+            borderColor:[
+              'rgb(0,0,0)'
+            ],
+            color:['#CD0C0C'],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        tooltips: {
+          enabled: false,
+        },
+        plugins: {
+          legend: {
+            position: window.innerWidth > 780? 'right' : 'top',
+            labels: {
+                  // This more specific font property overrides the global property
+                  font: {
+                      size: 18
+                  }
+              }
+          },
+          
+        }
+      },
+    });
+  
+
+  </script>
+</body>
+</html>

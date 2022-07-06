@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <canvas id="myChart"></canvas>
+    <!-- Js -->
+    <script src="../Js/chart.js"></script>
+    <script>
+        const ctx = document.getElementById("myChart");
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Habana",
+              "Matanzas",
+              "Holguín",
+              "Camaguey",
+              "Santiago de Cuba",
+              "Pinar del Río",
+              "Pinar del Río",
+              "Pinar del Río",
+              "Pinar del Río",
+              "Pinar del Río",
+              "Pinar del Río",
+            ],
+            datasets: [
+              {
+                label: "# of Votes",
+                data: [8, 19, 10, 90, 50, 10, 10, 90, 50, 10],
+                backgroundColor: [
+                  "rgba(40,144,152,0.3)",
+                ],
+                borderColor:[
+                  'rgb(0,0,0)'
+                ],
+                color:['#CD0C0C'],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            tooltips: {
+              enabled: false,
+            },
+            plugins: {
+              legend: {
+                position: window.innerWidth > 780? 'right' : 'top',
+                labels: {
+                      // This more specific font property overrides the global property
+                      font: {
+                          size: 18
+                      }
+                  }
+              },
+              
+            }
+          },
+        });
+      
+    
+      </script>
+  </body>
+</html>

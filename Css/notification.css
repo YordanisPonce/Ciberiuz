@@ -1,0 +1,48 @@
+:root{
+    --imgSizePcScreen:60px;
+    --imgSizeCellScreen:40px;
+  }
+  .fotoAvatarNotificacion{
+    width: var(--imgSizePcScreen);
+    height: var(--imgSizePcScreen);
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  #noNotifications{
+    font-size: 15rem; 
+    color: #C6C6C6;
+  }
+
+  .notification{
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    transition: all .3s;
+  }
+
+  .notification:hover{
+    background-color: #393a34c7;
+    color: white;
+    padding: .7%;
+  }
+
+  .panel{
+    padding-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .panel{
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #noNotifications {
+      font-size: 8rem;
+    }
+    .fotoAvatarNotificacion{
+      width: var(--imgSizeCellScreen);
+      height: var(--imgSizeCellScreen);
+    }
+  }

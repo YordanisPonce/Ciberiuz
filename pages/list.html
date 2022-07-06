@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberiuz</title>
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="stylesheet" href="../Css/bootstrap.css" />
+  <link rel="stylesheet" href="../fontawesome/css/all.css" />
+  <link rel="stylesheet" href="../Css/main.css" />
+  <link rel="stylesheet" href="../Css/list.css" />
+</head>
+
+<body>
+  <!-- Navbar PC view -->
+  <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark sticky-top" style="background-color: #393a34">
+    <div class="container-fluid pe-md-4 pe-lg-5">
+      <a class="navbar-brand" href="/">
+        <img src="../assets/logoCiberiuz.png" alt="" width="100" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="sectionsPCView" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home d-sm-none d-lg-inline"></i>
+              Inicio</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activePCSection" href="list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i>
+              Listas</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html"><i class="fas fa-box-open d-sm-none d-lg-inline"></i>
+              Paquetes</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i> Artistas</a>
+            <div class="activating_item"></div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div id="form" style="padding: 7px">
+            <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
+            <i class="fa fa-search" style="padding: 7px; cursor: pointer" id="btn_search"></i>
+          </div>
+          <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              ">
+            <i class="fas fa-user" style="font-size: 1.6rem; color: white"></i>
+          </div>
+          <div class="dropdown" style="padding: 7px">
+            <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false" style="text-decoration: none">
+              @username
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+              <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+              <li><a class="dropdown-item" href="office.html">Compras</a></li>
+              <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+              <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+              <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              <li class="py-1"><hr class="dropdown-divider"></li>
+      <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+         
+            </ul>
+          </div>
+          <div style="color: white; padding: 7px; position: relative" class="dropdown">
+            <i class="fas fa-bell" style="cursor: pointer" id="icon_notifications" tabindex="0" data-bs-trigger="focus"
+              data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+              data-bs-content="" title="Notificaciones"></i>
+
+            <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
+              9
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar Cell View -->
+  <nav class="navbar pb-0 d-block d-md-none sticky-top" style="background-color: #393a34">
+    <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2">
+      <a class="navbar-brand" href="/">
+        <img src="../assets/logoCiberiuz.png" alt="" width="100" /></a>
+
+      <!-- Searchfield -->
+      <div class="d-flex align-items-center">
+        <div id="form">
+          <input type="text" class="form-input" placeholder="Buscar" />
+          <i class="fa fa-search"></i>
+        </div>
+        <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              " class="dropdown position-relative" id="cell-view">
+          <i class="fas fa-user" style="font-size: 1.6rem; color: white;" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false"></i>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view">
+            <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+            <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+            <li><a class="dropdown-item" href="office.html">Compras</a></li>
+            <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+            <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+            <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+            <li class="py-1"><hr class="dropdown-divider"></li>
+    <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+       
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <ul id="sectionsCellView" class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-white w-100"
+      style="flex-direction: row">
+      <li class="nav-item me-4">
+        <a href="packages.html"><i class="fas fa-box-open" style="margin-left: 15px"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="list.html"><i class="fas fa-music activeCellSection"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="/"><i class="fas fa-home"></i></a>
+      </li>
+      <li class="nav-item me-4 position-relative">
+        <a href="notifications.html"><i class="fas fa-bell"></i></a>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          9
+          <span class="visually-hidden"></span>
+        </span>
+      </li>
+      <li class="nav-item me-4">
+        <a href="artists.html"><i class="fas fa-user"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- List section -->
+  <div class="px-0 px-md-4 px-lg-5">
+    <div class="container-fluid bg-white pb-4">
+      <div class="row">
+        <!-- Content -->
+        <div class="col-sm-12 col-md-8  pt-4">
+          <h3 class="border-bottom border-2 pb-2 pb-md-3 text-center text-md-start">
+            Lista top 10
+            <br>
+            <span style="font-size: 18px;">
+              <small>
+                Canciones m&aacute;s populares
+              </small>
+            </span>
+          </h3>
+          <!-- Songs box -->
+          <div>
+            <!-- Song box -->
+            <div class="px-2 py-3 text-white pe-3 mt-4" style="
+                  background-color: #393A34 !important;
+                  border-radius: 13px;
+                ">
+              <div class="row align-items-center">
+                <div class="col-1 number">1-</div>
+                <div class="col-5">
+                  <div>Falling down</div>
+                  <div style="font-size: 0.7rem; color: #b8b8b8;">
+                    Our secret fet Nig
+                  </div>
+                </div>
+                <div class="col-6 features">
+                  <div class="row justify-content-end">
+                    <div class="col-3 col-sm-2 col-md-2">
+                      <i class="fa fa-arrow-right upSong"> </i>
+                    </div>
+                    <div class="col-3 col-sm-2 col-md-2">
+                      <i class="far fa-play-circle">
+                        <span class="badge">42</span>
+                      </i>
+                    </div>
+                    <div class="col-3 col-sm-2 col-md-2">
+                      <i class="far fa-heart">
+                        <span class="badge">245</span>
+                      </i>
+                    </div>
+                    <div class="col-3 col-sm-2 col-md-2">
+                      <i class="fa fa-share">
+                        <span class="badge">4</span>
+                      </i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Canciones que estan despues de la primera en la lista top -->
+          <script>
+            for (let i = 2; i < 11; i++) {
+              document.write(`
+                 <div >
+              <!-- Song box -->
+              <div
+                class="px-2 py-3 text-white pe-3 mt-2"
+                style="
+                  background-color: #393a34c7 !important;
+                  border-radius: 13px;
+                "
+              >
+                <div class="row align-items-center">
+                  <div class="col-1 number">${i}-</div>
+                  <div class="col-5">
+                    <div>Falling down</div>
+                    <div style="font-size: 0.7rem; color: #b8b8b8;">
+                      Our secret fet Nig
+                    </div>
+                  </div>
+                  <div class="col-6 features">
+                    <div class="row justify-content-end">
+                      <div class="col-3 col-sm-2 col-md-2">
+                        <i class="fa fa-arrow-right upSong"> </i>
+                      </div>
+                      <div class="col-3 col-sm-2 col-md-2">
+                        <i class="far fa-play-circle">
+                          <span class="badge">42</span>
+                        </i>
+                      </div>
+                      <div class="col-3 col-sm-2 col-md-2">
+                        <i class="far fa-heart">
+                          <span class="badge">245</span>
+                        </i>
+                      </div>
+                      <div class="col-3 col-sm-2 col-md-2">
+                        <i class="fa fa-share">
+                          <span class="badge">4</span>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                 
+                 
+                 `);
+
+            }
+          </script>
+
+        </div>
+
+        <!-- "Ultimas reproducciones" section -->
+        <div class="col-sm-12 col-md-4 vh-100 d-none d-md-block">
+          <div class="left-column">
+            <p><i class="fa fa-list"></i> Últimas reproducidas</p>
+            <hr width="100%" />
+            <p>
+              <i class="fas fa-play" style="margin-right: 5px"></i>
+              Bad Bunny && Becky G - Amantes
+            </p>
+            <p>
+              <i class="fa fa-play" style="margin-right: 5px"></i>Chocolate -
+              Una noche más
+            </p>
+            <p>
+              <i class="fa fa-play" style="margin-right: 5px"></i> Anuel -
+              Bubalu
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Js -->
+  <script src="../Js/popper.min.js"></script>
+  <script src="../Js/bootstrap.js"></script>
+  <script src="../Js/jquery-3.5.1.js"></script>
+  <script src="../Js/js.cookie.min.js"></script>
+  <script src="../Js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      showNotifications("notifications.html");
+      $("#btn_search").click(function (e) {
+        alert("Has hecho click en buscar");
+      });
+    });
+  </script>
+</body>
+
+</html>

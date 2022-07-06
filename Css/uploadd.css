@@ -1,0 +1,213 @@
+.header a {
+    font-size: 28px;
+}
+
+.form-post .col-12 {
+    background-color: #7F91A3;
+}
+
+img {
+    object-fit: cover;
+}
+
+.form-post a, .changed-background, .form-post p {
+    text-decoration: none;
+    color: #393a34;
+    cursor: pointer;
+}
+
+.form-post .col-12 .row {
+    padding: 0%;
+    /*     position: fixed; */
+}
+
+@media(max-width:400px) {
+    a span, a.username {
+        display: none;
+    }
+
+    .navbar-cell-view h1 {
+        font-size: 20px;
+    }
+
+    a i {
+        font-size: 25px;
+    }
+
+    label p, label i {
+        font-size: 22px;
+    }
+}
+
+.navbar-cell-view {
+    background-color: #393a34;
+}
+
+.text-area {
+    background-color: transparent !important;
+    padding: 2%;
+    word-break: break-all;
+    /* height: calc(100% - 100px);
+    overflow-y: scroll; */
+}
+
+.text-area p {
+    font-size: 30pt;
+}
+
+.container-text-area::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.container-text-area::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+.container-text-area::-webkit-scrollbar-thumb {
+    box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.637);
+    border-radius: 5px;
+    background-color: rgb(124, 124, 124);
+}
+
+.file {
+    height: 70px;
+    background-color: transparent !important;
+    cursor: pointer;
+    border-top: 1px solid black;
+}
+
+.header-status {
+    border-bottom: 1px solid black;
+}
+
+@media(max-width:380px) {
+    #liveToast {
+        width: 100%;
+    }
+}
+
+@media(min-width:768px) {
+    .file p {
+        font-size: 24px;
+    }
+}
+
+.navbar a {
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(/fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: action-jackson;
+    src: url(/fonts/actionJackson/actionj.ttf);
+}
+
+@font-face {
+    font-family: bebas-neue;
+    src: url(/fonts/bebasNew/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: caviar-dreams;
+    src: url(/fonts/caviarDreams/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+    font-family: little-days;
+    src: url(/fonts/littleDays/Little\ days.ttf);
+}
+
+#input_search_song, #input_search_song:focus {
+    border-top: transparent solid 1px !important;
+    border-left: transparent solid 1px !important;
+    border-right: transparent solid 1px !important;
+    border-radius: 0%;
+}
+
+#search-button-confirm {
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 0%;
+}
+
+.modal-body {
+    padding: 0%;
+}
+
+.modal-header a, .modal-header h5 {
+    color: #393a34;
+}
+
+.modal-header h5 i {
+    transform: rotate(90deg);
+
+}
+
+.modal-header input {
+    background-color: rgba(128, 128, 128, 0.466);
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.modal-header input:focus {
+    outline: none;
+}
+
+.header-modal-body {
+    background-color: #393a34;
+}
+
+@media(min-width:190) {
+    .modal-body {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:275px) {
+    .form-check {
+        font-size: 12px;
+    }
+}
+
+.form-check-input:checked {
+    background-color: rgb(50, 168, 50);
+    border-color: rgb(50, 168, 50);
+}
+
+.form-check-input:focus {
+    border-color: rgb(50, 168, 50);
+    outline: 0;
+    box-shadow: none;
+}
+
+.header-row {
+    padding-top: 59px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width:216px) {
+    .header-row {
+        height: 150px;
+        padding-top: 53px;
+    }
+    .navbar-title{
+        font-size: small;
+    }
+}

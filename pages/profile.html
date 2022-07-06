@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciberiuz</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bivraz</title>
+        <link rel="icon" href="../assets/logo.png">
+        <link rel="stylesheet" href="../Css/bootstrap.css">
+        <link rel="stylesheet" href="../fontawesome/css/all.css">
+        <link rel="stylesheet" href="../Css/main.css">
+        <link rel="stylesheet" href="../Css/profile.css">
+    </head>
+
+    <body>
+        <!-- Navbar PC view -->
+        <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark sticky-top" style="background-color: #393a34">
+            <div class="container-fluid pe-md-4 pe-lg-5">
+                <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/"><i
+                                    class="fas fa-home d-sm-none d-lg-inline"></i>
+                                Inicio</a>
+                            <div class="activating_item"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i>
+                                Listas</a>
+                            <div class="activating_item"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="packages.html"><i
+                                    class="fas fa-box-open d-sm-none d-lg-inline"></i>
+                                Paquetes</a>
+                            <div class="activating_item"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i>
+                                Artistas</a>
+                            <div class="activating_item"></div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div id="form" style="padding: 7px;">
+                            <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
+                            <i class="fa fa-search" style="padding: 7px;cursor: pointer;" id="btn_search"></i>
+                        </div>
+                        <div style="
+                    border: 2px solid white;
+                    border-radius: 100px;
+                    padding: 3px 7px;
+                  ">
+                            <i class="fas fa-user" style="font-size: 1.6rem; color: white;"></i>
+                        </div>
+                        <div class="dropdown " style="padding: 7px;">
+                            <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                                @username
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                                <li><a class="dropdown-item" href="office.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                <li class="py-1"><hr class="dropdown-divider"></li>
+                        <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                            </ul>
+                        </div>
+                        <div style="color: white;padding: 7px;position: relative;" class="dropdown">
+                            <i class="fas fa-bell" style="cursor: pointer;" id="icon_notifications" tabindex="0"
+                                data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover"
+                                data-bs-html="true" data-bs-placement="bottom" data-bs-content=""
+                                title="Notificaciones"></i>
+
+                            <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
+                                9
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <!-- Navbar Cell View -->
+        <nav class="navbar navbar-light pb-0 d-block d-md-none sticky-top bg-white">
+            <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-2 px-4 border-bottom border-2">
+                <a class="navbar-brand" href="/"> <i class="fa fa-angle-left text-dark"></i></a>
+                <div class="text-secondary" style="font-size: 1.2rem; font-weight: bold;">Mi Perfil</div>
+                <div style="
+                    border-radius: 100px;
+                    padding: 3px 7px;" 
+                    class="dropdown position-relative" id="cell-view"
+                >
+                    <i class="fas fa-bars" style="font-size: 1.6rem;" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view"
+                        style="
+                            color: rgb(235, 232, 232);
+                            background-color: #383838;
+                            top: -10px;
+                            right: -20px !important;
+                            text-align: end;
+                        " 
+                    >
+                        <li class="me-4  " style="margin-top: 6px; font-size: 1.3rem; font-weight: 900;">Menú</li>
+                        <li><hr class="dropdown-divider"></li>
+                        <div class="py-2 ps-5 me-3 menu-profile-container">
+                            <style>
+                                .menu-profile-container  a{
+                                    color: rgb(235, 232, 232);
+                                    padding: 10px 10px 0px;
+                                }
+                            </style>
+                            <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                            <li><a class="dropdown-item" href="office.html">Oficina</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </div>
+                        <li class="py-1"><hr class="dropdown-divider"></li>
+                        <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item text-white justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+
+        <!-- content -->
+
+        <!-- Home -->
+        <div class="px-0 px-md-4 px-lg-5">
+            <div class="container-fluid bg-white" id="home" style="height: max-content;">
+                <div class="row d-flex justify-content-center justify-content-md-start">
+                    <div class="col-6 col-md-3 offset-md-1 offset-lg-1 offset-xl-0 d-flex justify-content-center mt-3 ">
+                        <figure class="position-relative">
+                            <!-- Este boton tiene que salir solo en el perfil del artista autenticado -->
+                            <div class="position-absolute d-flex justify-content-center align-items-center rounded-circle bg-light"
+                                id="edit-profile">
+                                <i class="fas fa-highlighter btn-edit text-white rounded-circle"
+                                    style="    box-shadow: gray 2px 2px 6px;"></i>
+                            </div>
+                            <!-- Este boton tiene que salir solo en el perfil del artista autenticado -->
+                            <img src="/assets/bad-bunny-gq-april-2019.jpg" alt="" class="rounded-circle"
+                                id="img-profile">
+                            <figcaption class="text-center mt-1 title-song">Our Secret</figcaption>
+                            <figcaption class="text-center mt-1">@username</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center justify-content-md-start">
+                        <p class="description text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ullam optio necessitatibus tempora voluptatem</p>
+                    </div>
+
+                </div>
+
+                <!-- pc view proile -->
+                <div class="row  d-none d-md-block">
+                    <div class="container col-12" style="padding-left: 5%;padding-right: 5%;">
+                        <hr class="row" id="division">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist"
+                                    style="border-bottom: none !important;">
+                                    <button class="nav-link active nav-link-custom" id="nav-home-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab"
+                                        aria-controls="nav-home" aria-selected="true"><i class="fa fa-music"></i>
+                                        M&uacute;sica</button>
+                                    <button class="nav-link nav-link-custom" id="nav-profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-profile" type="button" role="tab"
+                                        aria-controls="nav-profile" aria-selected="false"><i
+                                            class="fa fa-folder-open"></i> Albumes</button>
+
+                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-contact" type="button" role="tab"
+                                        aria-controls="nav-contact" aria-selected="false"><i
+                                            class="fas fa-sliders-h"></i> Listas</button>
+                                </div>
+                                <div class="tab-content col-12 row with-scroll" id="nav-tabContent"
+                                    style="margin-top: .5%;">
+                                    <div class="tab-pane fade show active col-12" id="nav-home" role="tabpanel"
+                                        aria-labelledby="nav-home-tab">
+
+                                        <!-- song pc view -->
+
+                                        <div class="text-white  p-1 mt-2 mb-2 rounded" style="
+                                    background-color: #393a34c7 !important;
+                                  ">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-6 d-flex aling-items-center " style="height:50px;">
+                                                    <img src="/assets/bad-bunny-gq-april-2019.jpg" alt="" width="50"
+                                                        height="50">
+                                                    <p style="margin-left: 5%;" class="text-center song-name">Don't stop
+                                                        the music</p>
+                                                </div>
+                                                <div class="col-6 features">
+                                                    <div class="row justify-content-end">
+                                                        <div class="col-md-3">
+                                                            <i class="far fa-play-circle">
+                                                                <span class="badge">42</span>
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <i class="far fa-heart">
+                                                                <span class="badge">245</span>
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <i class="fa fa-share">
+                                                                <span class="badge">4</span>
+                                                            </i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            for (let i = 0; i < 50; i++) {
+                                                document.write(`
+                                            <div class="text-white  p-1 mt-2 mb-2 rounded" style="
+                                    background-color: #393a34c7 !important;
+                                  ">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-6 d-flex aling-items-center " style="height:50px;">
+                                                    <img src="/assets/bad-bunny-gq-april-2019.jpg" alt="" width="50"
+                                                        height="50">
+                                                    <p style="margin-left: 5%;" class="text-center song-name">Don't stop the music</p>
+                                                </div>
+                                                <div class="col-6 features">
+                                                    <div class="row justify-content-end">
+                                                        <div class="col-md-3">
+                                                            <i class="far fa-play-circle">
+                                                                <span class="badge">42</span>
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <i class="far fa-heart">
+                                                                <span class="badge">245</span>
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <i class="fa fa-share">
+                                                                <span class="badge">4</span>
+                                                            </i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            
+                                            `);
+
+                                            }
+                                        </script>
+
+                                    </div>
+                                    <div class="tab-pane fade col-12" id="nav-profile" role="tabpanel"
+                                        aria-labelledby="nav-profile-tab">
+                                        <div>
+                                            <div class=" p-2 mb-2 text-secondary">
+                                                <div class="row align-items-center d-flex album mt-3">
+                                                    <div class="col-12">
+                                                        <p><i class="fa fa-music px-2 "></i><span>Album name</span></p>
+                                                    </div>
+                                                    <div class="col-4 content-album">
+                                                        <img src="/assets/bad-bunny-gq-april-2019.jpg" alt=""
+                                                            class="img-fluid rounded album-photo">
+                                                        <p class="text-center mt-1"># pistas</p>
+                                                    </div>
+                                                    <div class="col-8 content-album with-scroll">
+                                                        <!-- song list-->
+                                                        <div class="text-white  mb-2 song">
+                                                            <div
+                                                                class="row align-items-center d-flex align-items-center">
+                                                                <div
+                                                                    class="col-6  d-flex align-items-center justify-content-center">
+                                                                    <a class="song-name-album text-center"> Don't stop
+                                                                        the music</a>
+                                                                </div>
+                                                                <div class="col-5 features">
+                                                                    <div class="row justify-content-end">
+                                                                        <div
+                                                                            class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                            <i class="far fa-play-circle">
+
+                                                                            </i>
+                                                                        </div>
+                                                                        <div
+                                                                            class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                            <i class="far fa-heart">
+
+                                                                            </i>
+                                                                        </div>
+                                                                        <div
+                                                                            class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                            <i class="fa fa-share">
+
+                                                                            </i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <script>
+                                                            for (let i = 0; i < 20; i++) {
+                                                                document.write(`
+                                                                <div class="text-white  mb-2 song">
+                                                            <div class="row align-items-center d-flex align-items-center">
+                                                                <div class="col-6  d-flex align-items-center justify-content-center" >
+                                                                   <a class="song-name-album text-center"> Don't stop the music</a>
+                                                                </div>
+                                                                <div class="col-5 features">
+                                                                    <div class="row justify-content-end">
+                                                                        <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                            <i class="far fa-play-circle">
+            
+                                                                            </i>
+                                                                        </div>
+                                                                        <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                            <i class="far fa-heart">
+            
+                                                                            </i>
+                                                                        </div>
+                                                                        <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                            <i class="fa fa-share">
+            
+                                                                            </i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+            
+                                                        </div>
+                                                                
+                                                                `);
+
+                                                            }
+                                                        </script>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <script>
+                                                for (let i = 0; i < 50; i++) {
+                                                    document.write(`
+                                                      <div class="row align-items-center mt-3 d-flex align-items-center album">
+                                                    <div class="col-12">
+                                                        <p><i
+                                                                class="fa fa-music px-2 "></i><span>Album name</span></p>
+                                                    </div>
+                                                    <div class="col-4 content-album">
+                                                        <img src="/assets/bad-bunny-gq-april-2019.jpg" alt=""
+                                                            class="img-fluid rounded album-photo">
+                                                        <p class="text-center mt-1"># pistas</p>
+                                                    </div>
+                                                    <div class="col-8 content-album">Canciones</div>
+            
+                                                </div>
+                                                      
+                                                      
+                                                      `);
+
+                                                }
+                                            </script>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div class="tab-pane fade col-12 " id="nav-contact" role="tabpanel"
+                                        aria-labelledby="nav-contact-tab">
+                                        <div class="row reproduction-item py-2">
+                                            <div class="col-8">
+                                                <p class=" d-flex align-items-center title-reproduction-list mt-4">
+                                                    <strong>1- Lista por Halloween</strong>
+                                                </p>
+                                                <p class="date">date</p>
+                                            </div>
+                                            <div
+                                                class="col-12 top-list align-items-center justify-content-center text-white with-scroll">
+                                                <script>
+                                                    for (let i = 0; i < 20; i++) {
+                                                        document.write(` <p class="title_song">${i + 1}- Falling Down<span><br>XXX Tentation</span></p>`);
+
+                                                    }
+                                                </script>
+                                            </div>
+                                            <div class="col-12 text-center btn-options mt-2">
+                                                <i class="far fa-play-circle"></i>
+                                                <i class="far fa-heart"></i>
+                                                <i class="fa fa-share"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--                            datos del perfil-->
+
+                            <div class="col-md-4 offset-1" id="profile-information">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <p style="font-style: italic;">Seguidores</p>
+                                        <p>0</p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <p style="font-style: italic;">Canciones</p>
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 py-3 position-relative">
+                                    <div class="col-12 d-flex align-items-center">
+                                        <figure class="d-flex aling-items-center">
+                                            <img src="/assets/bad-bunny-gq-april-2019.jpg" alt="" width="50" height="50"
+                                                class="rounded-circle">
+                                            <figcaption
+                                                style="height: fit-content;font-weight: bold;padding-left: 5px;">
+                                                @username
+                                                <br>
+                                                <span style="font-size: 12px;"> 15k</span>
+                                            </figcaption>
+                                        </figure>
+                                        <p class="text-end follow-text"><i class="fa fa-check" aria-hidden="true"></i>
+                                            Siguiendo</p>
+                                    </div>
+                                    <div class="col-12 d-flex align-items-center">
+                                        <figure class="d-flex aling-items-center">
+                                            <img src="/assets/bad-bunny-gq-april-2019.jpg" alt="" width="50" height="50"
+                                                class="rounded-circle">
+                                            <figcaption
+                                                style="height: fit-content;font-weight: bold;padding-left: 5px;">
+                                                @username
+                                                <br>
+                                                <span style="font-size: 12px;"> 15k</span>
+                                            </figcaption>
+                                        </figure>
+                                        <p class="text-end follow-text"><i class="fa fa-check" aria-hidden="true"></i>
+                                            Siguiendo</p>
+                                    </div>
+                                    <a href="" class="view-all-artist text-dark" style="font-size: 12px;">Ver todo</a>
+                                </div>
+                            </div>
+
+                            <!--                            datos del perfil-->
+
+                        </div>
+                    </div>
+                </div>
+                <!--end pc view proile -->
+                <!-- cell view -->
+                <div class="row d-flex justify-content-center justify-content-md-start d-sm-block d-md-none">
+                    <div class="row d-md-none">
+                        <div class="col-6 text-center">
+                            <p class="follow-song">1K</p>
+                            <p>Seguidores</p>
+                        </div>
+                        <div class="col-6 text-center ">
+                            <p class="follow-song"> 100</p>
+                            <p>Canciones</p>
+                        </div>
+                    </div>
+                    <div class="col-auto mb-3 d-flex justify-content-center">
+                        <button type="button" class="btn btn-brown btn-sm">Dejar de seguir</button>
+                    </div>
+                    <ul class="nav nav-tabs col-12 col-md-4 d-flex justify-content-start" id="myTab" role="tablist"
+                        style="width: 100%;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                aria-selected="true"><i class="fa fa-music"></i> Canciones</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact" aria-selected="false"><i
+                                    class="fa fa-folder-open"></i> &Aacute;lbumes</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="reproduction-list-tab" data-bs-toggle="tab"
+                                data-bs-target="#reproduction-list" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false"><i class="fas fa-sliders-h"></i> listas</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content " id="myTabContent">
+                        <div class="tab-pane fade row show active" id="profile" role="tabpanel"
+                            aria-labelledby="profile-tab">
+                            <div>
+                                <!-- Song box -->
+                                <script>
+                                    for (let i = 0; i < 50; i++) {
+                                        document.write(`
+                                     <div class="text-white  p-2 mt-2 mb-2" style="
+                                    background-color: #393a34c7 !important;
+                                    border-radius: 13px;
+                                    padding-bottom: 2px !important;
+                                  ">
+                                    <div class="row align-items-center d-flex align-items-center">
+                                        <div class="col-6">
+                                          <div class="row">
+                                              <img src="/assets/bad-bunny-gq-april-2019.jpg" alt="" width="50" height="50" class="rounded d-flex col-5 col-md-3 img-fluid">
+                                              <p class="col-7 col-md-9 name-song text-center text-sm-start d-flex align-items-center">Don't stop the music </p>
+                                          </div>
+                                        </div>
+                                        <div class="col-6 features">
+                                            <div class="row justify-content-end">
+                                                <div class="col-3 col-sm-2 col-md-2">
+                                                    <i class="far fa-play-circle">
+                                                        <span class="badge">42</span>
+                                                    </i>
+                                                </div>
+                                                <div class="col-3 col-sm-2 col-md-2">
+                                                    <i class="far fa-heart">
+                                                        <span class="badge">245</span>
+                                                    </i>
+                                                </div>
+                                                <div class="col-3 col-sm-2 col-md-2">
+                                                    <i class="fa fa-share">
+                                                        <span class="badge">4</span>
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                     
+                                     `);
+
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <!-- album box -->
+                            <div>
+                                <div class=" p-2 mb-2 text-secondary">
+                                    <div class="row align-items-center d-flex album mt-3">
+                                        <div class="col-12">
+                                            <p><i class="fa fa-music px-2 "></i><span>Album name</span></p>
+                                        </div>
+                                        <div class="col-4 content-album">
+                                            <img src="/assets/bad-bunny-gq-april-2019.jpg" alt=""
+                                                class="img-fluid rounded album-photo">
+                                            <p class="text-center mt-1"># pistas</p>
+                                        </div>
+                                        <div class="col-8 content-album">
+                                            <!-- song list-->
+                                            <div class="text-white  mb-2 song">
+                                                <div class="row align-items-center d-flex align-items-center">
+                                                    <div class="col-5 offset-1">
+                                                        Don't stop the music
+                                                    </div>
+                                                    <div class="col-5 features">
+                                                        <div class="row justify-content-end">
+                                                            <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                <i class="far fa-play-circle">
+
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                <i class="far fa-heart">
+
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                <i class="fa fa-share">
+
+                                                                </i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <script>
+                                                for (let i = 0; i < 20; i++) {
+                                                    document.write(`
+                                                    <div class="text-white  mb-2 song">
+                                                <div class="row align-items-center d-flex align-items-center">
+                                                    <div class="col-5 offset-1">
+                                                        Don't stop the music
+                                                    </div>
+                                                    <div class="col-5 features">
+                                                        <div class="row justify-content-end">
+                                                            <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                <i class="far fa-play-circle">
+
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                <i class="far fa-heart">
+
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-3 col-sm-2 col-md-2 offset-0 offset-sm-1">
+                                                                <i class="fa fa-share">
+
+                                                                </i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                                    
+                                                    
+                                                    `);
+
+                                                }
+                                            </script>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <script>
+                                    for (let i = 0; i < 50; i++) {
+                                        document.write(`
+                                          <div class="row align-items-center mt-3 d-flex align-items-center album">
+                                        <div class="col-12">
+                                            <p><i
+                                                    class="fa fa-music px-2 "></i><span>Album name</span></p>
+                                        </div>
+                                        <div class="col-4 content-album">
+                                            <img src="/assets/bad-bunny-gq-april-2019.jpg" alt=""
+                                                class="img-fluid rounded album-photo">
+                                            <p class="text-center mt-1"># pistas</p>
+                                        </div>
+                                        <div class="col-8 content-album">Canciones</div>
+
+                                    </div>
+                                          
+                                          
+                                          `);
+
+                                    }
+                                </script>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="tab-pane fade px-2" id="reproduction-list" role="tabpanel"
+                            aria-labelledby="reproduction-list-tab">
+                            <!--  list cell box -->
+                            <div class="row reproduction-item py-2">
+                                <div class="col-8">
+                                    <p class=" d-flex align-items-center title-reproduction-list mt-4">
+                                        <strong>1- Lista por Halloween</strong>
+                                    </p>
+                                    <p class="date">date</p>
+                                </div>
+                                <div class="col-12 top-list align-items-center justify-content-center text-white">
+                                    <script>
+                                        for (let i = 0; i < 20; i++) {
+                                            document.write(` <p class="title_song">${i + 1}- Falling Down<span><br>XXX Tentation</span></p>`);
+
+                                        }
+                                    </script>
+                                </div>
+                                <div class="col-12 text-center btn-options mt-2">
+                                    <i class="far fa-play-circle"></i>
+                                    <i class="far fa-heart"></i>
+                                    <i class="fa fa-share"></i>
+                                </div>
+                            </div>
+                            <div class="row reproduction-item py-2">
+                                <div class="col-8">
+                                    <p class=" d-flex align-items-center title-reproduction-list mt-4">
+                                        <strong>2- Semana de la vistoria</strong>
+                                    </p>
+                                    <p class="date">date</p>
+                                </div>
+                                <div class="col-12 top-list align-items-center justify-content-center text-white">
+                                    <script>
+                                        for (let i = 0; i < 20; i++) {
+                                            document.write(` <p class="title_song">${i + 1}- Alabnza<span><br>Buena Fe</span></p>`);
+
+                                        }
+                                    </script>
+                                </div>
+                                <div class="col-12 text-center btn-options mt-2">
+                                    <i class="far fa-play-circle"></i>
+                                    <i class="far fa-heart"></i>
+                                    <i class="fa fa-share"></i>
+                                </div>
+                            </div>
+                            <!-- end reproduction list cell box -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        </div>
+        <!-- content -->
+
+        <!-- Js -->
+        <script src="../Js/popper.min.js"></script>
+        <script src="../Js/bootstrap.js"></script>
+        <script src="../Js/jquery-3.5.1.js"></script>
+        <script src="../Js/js.cookie.min.js"></script>
+        <script src="../Js/custom.js"></script>
+        <script src="../Js/profile.js"></script>
+        <script>
+            $(document).ready(function () {
+                showNotifications("notifications.html");
+                //Poniendo una fecha provisional
+                let date = new Date().toDateString();
+                $(".date").text(date);
+                //Dandole tamaño a los botones en dependencia del rol de usuario
+                let amount = $(`.nav-tabs > li`).length;
+                btnAmount(amount);
+                $(`i.far`).click(function (e) {
+                    // alert($(`i.far`).css(`color`));
+                    setIconPlayPause(this);
+                });
+            });
+
+        </script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciberiuz</title>
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="stylesheet" href="../Css/bootstrap.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
+  <link rel="stylesheet" href="../Css/main.css">
+  <link rel="stylesheet" href="../Css/artist.css">
+</head>
+
+<body>
+  <!-- Navbar PC view -->
+  <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark sticky-top" style="background-color: #393a34">
+    <div class="container-fluid pe-md-4 pe-lg-5">
+      <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home d-sm-none d-lg-inline"></i>
+              Inicio</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i> Listas</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html"><i class="fas fa-box-open d-sm-none d-lg-inline"></i> Paquetes</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activePCSection" href="artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i>
+              Artistas</a>
+            <div class="activating_item"></div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div id="form" style="padding: 7px;">
+            <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
+            <i class="fa fa-search" style="padding: 7px;cursor: pointer;" id="btn_search"></i>
+          </div>
+          <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              ">
+            <i class="fas fa-user" style="font-size: 1.6rem; color: white;"></i>
+          </div>
+          <div class="dropdown " style="padding: 7px;">
+            <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false" style="text-decoration: none;">
+              @username
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                                <li><a class="dropdown-item" href="office.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                <li class="py-1"><hr class="dropdown-divider"></li>
+                        <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                           
+            </ul>
+          </div>
+          <div style="color: white;padding: 7px;position: relative;" class="dropdown">
+            <i class="fas fa-bell" style="cursor: pointer;" id="icon_notifications" tabindex="0" data-bs-trigger="focus"
+              data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+              data-bs-content="" title="Notificaciones"></i>
+
+            <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
+              9
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Navbar Cell View -->
+  <nav class="navbar pb-0 d-block d-md-none sticky-top" style="background-color: #393a34">
+    <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2">
+      <a class="navbar-brand" href="/"> <img src="../assets/logoCiberiuz.png" alt="" width="100"></a>
+
+      <!-- Searchfield -->
+      <div class="d-flex align-items-center">
+        <div id="form">
+          <input type="text" class="form-input" placeholder="Buscar" />
+          <i class="fa fa-search"></i>
+        </div>
+        <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              " class="dropdown position-relative" id="cell-view">
+          <i class="fas fa-user" style="font-size: 1.6rem; color: white;" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false"></i>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view">
+            <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+            <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+            <li><a class="dropdown-item" href="office.html">Compras</a></li>
+            <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+            <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+            <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+            <li class="py-1"><hr class="dropdown-divider"></li>
+    <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+       
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <ul id="sectionsCellView" class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-light w-100"
+      style="flex-direction: row">
+      <li class="nav-item me-4">
+        <a href="packages.html"><i class="fas fa-box-open" style="margin-left: 15px"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="list.html"><i class="fas fa-music"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="/"><i class="fas fa-home "></i></a>
+      </li>
+      <li class="nav-item me-4 position-relative">
+        <a href="notifications.html"><i class="fas fa-bell"></i></a>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          9
+          <span class="visually-hidden"></span>
+        </span>
+      </li>
+      <li class="nav-item me-4">
+        <a href="artists.html"><i class="fas fa-user activeCellSection"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- content -->
+
+  <!-- Home -->
+  <div class="px-0 px-md-4 px-lg-5">
+    <div class="container-fluid bg-white" id="home">
+      <div class="row">
+        <div class="col-12 col-md-8 rigth-column">
+          <section class="row">
+            <header class="col-12">
+              <h1 class="secondaryTitle d-flex justify-content-center align-items-center justify-content-md-start">
+                Artistas</h1>
+              <hr>
+            </header>
+            <article class="col-12 article">
+              <div class="container-fluid" style="padding-left: 5%;padding-right: 5%;">
+                <div class="row">
+                  <div class="col-12 card-artist rounded">
+                    <header class="col-12">
+                      <h5>Nuevos Talentos</h5>
+                    </header>
+                    <article class="col-12">
+                      <!-- seccion de nuevos talentos -->
+                      <div class="row position-relative artists">
+                        <button class="carousel-control-prev rounded-circle col-1" type="button"
+                          data-bs-target="#controlsArtist" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden"></span>
+                        </button>
+                        <div class="col-12">
+                          <div id="controlsArtist" class="carousel slide" data-bs-touch="false"
+                            data-bs-interval="false">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active list-artist">
+                                <div class="row pc_view_artist d-flex  justify-content-center container-fluid">
+
+                                  <script>
+                                    for (let i = 0; i < 5; i++) {
+                                      document.write(`
+                                      <div class="col-2 d-flex justify-content-center offset-1  align-items-center offset-md-0">
+                                    <figure class="d-flex justify-content-center align-items-center" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="Artista con la descripción" title="Titulo" style="margin:3%;">
+                                    <a style="text-decoration: none;margin:2%;" href="#">
+                                    <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle img-artist" alt="..."
+                                        >
+                                      <figcaption>@username</figcaption>
+                                    </a>
+                                    </figure>
+                                    </div>
+                                     `);
+                                    }
+                                  </script>
+                                </div>
+                                <div class="row cell_view_artist justify-content-center container">
+                                  <script>
+                                    for (let i = 0; i < 2; i++) {
+                                      document.write(`
+                                   <div class="col-5 offset-1 d-flex justify-content-center align-items-center">
+                                   <figure class="d-flex justify-content-center align-items-center" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="Artista con la descripción" title="Titulo" style="margin:3%;">
+                                   <a style="text-decoration: none;margin:2%;" href="#">
+                                   <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle img-artist" alt="..."
+                                       width="50" height="50">
+                                     <figcaption>@username</figcaption>
+                                   </a>
+                                   </figure>
+                                   </div>
+                                    `);
+
+
+
+                                    }
+                                  </script>
+                                </div>
+
+
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <button class="carousel-control-next rounded-circle col-1" type="button"
+                          data-bs-target="#controlsArtist" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden"></span></button>
+                      </div>
+
+                    </article>
+                    <footer class="d-flex justify-content-end p-1">
+                      <a href="allArtist.html">Ver m&aacute;s</a>
+                    </footer>
+
+                  </div>
+                </div>
+
+
+                <!-- seccion de populares -->
+                <div class="row">
+                  <div class="col-12 card-artist rounded">
+                    <header class="col-12">
+                      <h5>Populares</h5>
+                    </header>
+                    <article class="col-12">
+                      <div class="row position-relative artists">
+                        <button class="carousel-control-prev rounded-circle col-1" type="button"
+                          data-bs-target="#controlsArtist2" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden"></span>
+                        </button>
+                        <div class="col-12">
+                          <div id="controlsArtist2" class="carousel slide" data-bs-touch="false"
+                            data-bs-interval="false">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active list-artist">
+                                <div class="row pc_view_artist d-flex  justify-content-center container-fluid">
+                                  <script>
+                                    for (let i = 0; i < 5; i++) {
+                                      document.write(`
+                    <div class="col-2 d-flex justify-content-center offset-1 align-items-center offset-md-0">
+                    <figure class="d-flex justify-content-center align-items-center" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="Artista con la descripción" title="Titulo" style="margin:3%;">
+                    <a style="text-decoration: none;margin:2%;" href="#">
+                    <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle img-artist" alt="..."
+                        width="50" height="50">
+                      <figcaption>@username</figcaption>
+                    </a>
+                    </figure>
+                    </div>
+                     `);
+
+
+
+                                    }
+                                  </script>
+                                </div>
+                                <div class="row cell_view_artist justify-content-center container">
+                                  <script>
+                                    for (let i = 0; i < 2; i++) {
+                                      document.write(`
+                   <div class="col-5 offset-1 d-flex justify-content-center align-items-center">
+                   <figure class="d-flex justify-content-center align-items-center" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="Artista con la descripción" title="Titulo" style="margin:3%;">
+                   <a style="text-decoration: none;margin:2%;" href="#">
+                   <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle img-artist" alt="..."
+                       width="50" height="50">
+                     <figcaption>@username</figcaption>
+                   </a>
+                   </figure>
+                   </div>
+                    `);
+
+
+
+                                    }
+                                  </script>
+                                </div>
+
+
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <button class="carousel-control-next rounded-circle col-1" type="button"
+                          data-bs-target="#controlsArtist2" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden"></span></button>
+                      </div>
+
+                    </article>
+                    <footer class="d-flex justify-content-end p-1">
+                      <a href="allArtist.html">Ver m&aacute;s</a>
+                    </footer>
+
+                  </div>
+                </div>
+
+                <!-- seccion de genero  -->
+                <div class="row">
+                  <div class="col-12 card-artist rounded">
+                    <header class="col-12">
+                      <h5>G&eacute;nero</h5>
+                    </header>
+                    <article class="col-12">
+                      <div class="row position-relative artists">
+                        <button class="carousel-control-prev rounded-circle col-1" type="button"
+                          data-bs-target="#controlsArtist2" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden"></span>
+                        </button>
+                        <div class="col-12">
+                          <div id="controlsArtist2" class="carousel slide" data-bs-touch="false"
+                            data-bs-interval="false">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active list-artist">
+                                <div class="row pc_view_artist d-flex  justify-content-center container-fluid">
+                                  <script>
+                                    for (let i = 0; i < 5; i++) {
+                                      document.write(`
+                    <div class="col-2 d-flex justify-content-center offset-1 align-items-center offset-md-0">
+                    <figure class="d-flex justify-content-center align-items-center genre" data-bs-html="true" tabindex="0" data-bs-placement="bottom" data-bs-trigger="focus" data-bs-content="Artista con la descripción" style="margin:3%;">
+                    <a style="text-decoration: none;margin:2%;">
+                    <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle img-artist" alt="..."
+                        width="50" height="50">
+                      <figcaption>genero</figcaption>
+                    </a>
+                    </figure>
+                    </div>
+                     `);
+
+
+
+                                    }
+                                  </script>
+                                </div>
+                                <div class="row cell_view_artist justify-content-center container">
+                                  <script>
+                                    for (let i = 0; i < 2; i++) {
+                                      document.write(`
+                                <div class="col-5 offset-1 d-flex justify-content-center align-items-center">
+                                  <figure class="d-flex justify-content-center align-items-center genre" data-bs-html="true" tabindex="0"  data-bs-placement="bottom" data-bs-trigger="focus" data-bs-content="" style="margin:3%;">
+                                     <a style="text-decoration: none;margin:2%;">
+                                         <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle img-artist" alt="..." width="50" height="50">
+                                  <figcaption>genero ${i + 1}</figcaption>
+                                     </a>
+                                   </figure>
+                                 </div>
+                    `);
+
+
+
+                                    }
+                                  </script>
+                                </div>
+
+
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <button class="carousel-control-next rounded-circle col-1" type="button"
+                          data-bs-target="#controlsArtist2" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden"></span></button>
+                      </div>
+
+                    </article>
+                    <footer class="d-flex justify-content-end p-1">
+                      <a href="allArtist.html">Ver m&aacute;s</a>
+                    </footer>
+
+                  </div>
+                </div>
+
+            </article>
+          </section>
+
+        </div>
+        <div class="col-12 col-md-4 vh-100 d-none d-md-block">
+          <div class="left-column">
+            <div class="d-none d-md-block">
+              <p style="width: 100%; font-size: x-small;">&copy; copyrigth 2022 - Todos los derechos reservados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- content -->
+
+  <!-- Js -->
+  <script src="../Js/popper.min.js"></script>
+  <script src="../Js/bootstrap.js"></script>
+  <script src="../Js/jquery-3.5.1.js"></script>
+  <script src="../Js/js.cookie.min.js"></script>
+  <script src="../Js/custom.js"></script>
+  <script src="../Js/arstists.js"></script>
+  <script>
+    $(document).ready(function () {
+      showNotifications("notifications.html");
+      responsiveDesign();
+      let data = `
+      <div class="carrousel-popover">
+      <a href="#">
+        <img src="/assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle" alt="..." width="50" height="50">
+      <span>@username</span>  
+      </a>
+      </div>
+  `;
+      enabledPopoverGenre(data);
+    });
+  </script>
+</body>
+
+</html>

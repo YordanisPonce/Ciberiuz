@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberiuz</title>
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="stylesheet" href="../Css/bootstrap.css" />
+  <link rel="stylesheet" href="../fontawesome/css/all.css" />
+  <link rel="stylesheet" href="../Css/main.css" />
+  <link rel="stylesheet" href="../Css/packages.css" />
+
+  <style>
+    .panel {
+      height: 100vh !important;
+    }
+
+    .packagePic {
+      width: 150px;
+    }
+
+    @media (max-width: 768px) {
+      .panel {
+        height: 100% !important;
+      }
+
+      .packagePic {
+        width: 100px;
+      }
+
+      body {
+        background-color: white !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar PC view -->
+  <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark fixed-top" style="background-color: #393a34"
+    id="navbar-pc-view">
+    <div class="container-fluid pe-md-4 pe-lg-5">
+      <a class="navbar-brand" href="/">
+        <img src="../assets/logoCiberiuz.png" alt="" width="100" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="sectionsPCView" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home d-sm-none d-lg-inline"></i>
+              Inicio</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i> Listas</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activePCSection" href="packages.html"><i
+                class="fas fa-box-open d-sm-none d-lg-inline"></i>
+              Paquetes</a>
+            <div class="activating_item"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i> Artistas</a>
+            <div class="activating_item"></div>
+          </li>
+        </ul>
+        <form class="d-flex" id="form">
+          <div id="form" style="padding: 7px">
+            <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
+            <i class="fa fa-search" style="padding: 7px; cursor: pointer" id="btn_search"></i>
+          </div>
+          <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              ">
+            <i class="fas fa-user" style="font-size: 1.6rem; color: white"></i>
+          </div>
+          <div class="dropdown" style="padding: 7px">
+            <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false" style="text-decoration: none">
+              @username
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+              <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+              <li><a class="dropdown-item" href="office.html">Compras</a></li>
+              <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+              <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+              <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              <li class="py-1"><hr class="dropdown-divider"></li>
+      <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+         
+            </ul>
+          </div>
+          <div style="color: white; padding: 7px; position: relative" class="dropdown">
+            <i class="fas fa-bell" style="cursor: pointer" id="icon_notifications" tabindex="0" data-bs-trigger="focus"
+              data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+              data-bs-content="" title="Notificaciones"></i>
+
+            <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
+              9
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar Cell View -->
+  <nav class="navbar pb-0 d-block d-md-none sticky-top" style="background-color: #393a34">
+    <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2">
+      <a class="navbar-brand" href="/">
+        <img src="../assets/logoCiberiuz.png" alt="" width="100" /></a>
+
+      <!-- Searchfield -->
+      <div class="d-flex align-items-center">
+        <div id="form">
+          <input type="text" class="form-input" placeholder="Buscar" />
+          <i class="fa fa-search"></i>
+        </div>
+        <div style="
+                border: 2px solid white;
+                border-radius: 100px;
+                padding: 3px 7px;
+              " class="dropdown position-relative" id="cell-view">
+          <i class="fas fa-user" style="font-size: 1.6rem; color: white;" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false"></i>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view">
+            <li><a class="dropdown-item" href="profile.html">Editar perfil</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Estadísticas</a></li>
+                                <li><a class="dropdown-item" href="office.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Mi cuenta</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Administrar</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Contáctanos</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                <li class="py-1"><hr class="dropdown-divider"></li>
+                        <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center" href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+                           
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <ul id="sectionsCellView" class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-light w-100"
+      style="flex-direction: row">
+      <li class="nav-item me-4">
+        <a href="packages.html"><i class="fas fa-box-open activeCellSection" style="margin-left: 15px"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="list.html"><i class="fas fa-music"></i></a>
+      </li>
+      <li class="nav-item me-4">
+        <a href="/"><i class="fas fa-home"></i></a>
+      </li>
+      <li class="nav-item me-4 position-relative">
+        <a href="notifications.html"><i class="fas fa-bell" style="margin-left: 15px"></i></a>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          9
+          <span class="visually-hidden"></span>
+        </span>
+      </li>
+      <li class="nav-item me-4">
+        <a href="artists.html"><i class="fas fa-user"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Packages section -->
+  <div class="px-0 px-md-4 px-lg-5">
+    <div class="container-fluid bg-white m-0 py-3 py-sm-5 py-md-0 vh-100 row justify-content-center align-items-center">
+      <div class="row pb-5 pb-md-0 " id="packages-row">
+        <div class="col-12 col-sm-4 mt-sm-0 position-relative">
+          <div class="d-flex justify-content-center">
+            <img class="packagePic" src="../assets/basico.png" alt="basicPackage" width="150px" id="basic-package" />
+          </div>
+          <h3 class="text-center mt-2">Básico</h3>
+          <div class="text-secondary text-center" style="font-size: 0.8rem">
+            Accede a la Lista Top 10 de las canciones m&aacute;s populares
+          </div>
+          <div class="text-secondary text-center" style="font-size: 0.7rem">
+            <!--             Me quede aqui -->
+            <p style="margin-bottom: 0%;">Valor: 35 cup</p>
+            <p class="text-danger"> 
+              <small class="text-danger">
+              no disponible
+            </small>
+          </div>
+          <div class="d-flex justify-content-center mt-3" style="bottom: 0%;right: 50%;">
+            <button class="btn btn-secondary" style="background-color: #353632 !important;margin: auto;" type="button"
+              data-bs-toggle="modal" data-bs-target="#form-modal"
+              onclick="sendTypePackage(1,1,35,['esto','lo otro','aquello'])">
+              <!-- Parametros del metodo sendTypePackage
+                  1- tipo de paquete, el 1, el2 o el 3
+                  2-Duración(cantidad de meses) 
+                  3-Precio del paquete
+                  4-Una lista con todo lo que ofrece el paquete
+              -->
+              Comprar
+            </button>
+          </div>
+        </div>
+        <hr width="100%" class="d-sm-none my-5">
+        <div class="col-12 col-sm-4 mt-sm-0" >
+          <div class="d-flex justify-content-center">
+            <img class="packagePic" src="../assets/pro.png" alt="basicPackage" width="150px" id="pro-package" />
+          </div>
+          <h3 class="text-center mt-2">Pro</h3>
+          <div class="text-secondary text-center" style="font-size: 0.8rem">
+            Accede a la Lista Top 10 de las canciones más populares. Entérate de las ultimas noticias de tus artistas
+            favoritos. Descarga canciones sin límite
+          </div>
+          <div class="text-secondary text-center" style="font-size: 0.7rem">
+            <p style="margin-bottom: 0%;">Valor: 45 cup</p>
+            <p class="text-danger"> 
+              <small class="text-danger">
+              no disponible
+            </small>
+          </p>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-secondary" style="background-color: #353632 !important" type="button"
+              data-bs-toggle="modal" data-bs-target="#form-modal"
+              onclick="sendTypePackage(2,2,45,['esto','lo otro','aquello'])">
+              Comprar
+            </button>
+          </div>
+        </div>
+        <hr width="100%" class="d-sm-none my-5">
+        <div class="col-12 col-sm-4 mt-sm-0">
+          <div class="d-flex justify-content-center">
+            <img class="packagePic" src="../assets/golden.png" alt="basicPackage" width="150px" id="golden-package" />
+          </div>
+          <h3 class="text-center mt-2">Golden</h3>
+          <div class="text-secondary text-center" style="font-size: 0.8rem">
+            Accede a la Lista Top 10 de las canciones más populares. Entérate de las ultimas noticias de tus artistas
+            favoritos. Descarga canciones sin límite. Sorpresa
+          </div>
+          <div class="text-secondary text-center" style="font-size: 0.7rem">
+            <p style="margin-bottom: 0%;">Valor: 50 cup</p>
+            <p class="text-danger"> 
+              <small class="text-danger">
+              no disponible
+            </small>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <!-- La funcion sendTypePackage recibe dos parametros, el primero para identificar el pquete y el segundo para el mes de duracioon-->
+            <button class="btn btn-secondary package_heigth" style="background-color: #353632 !important" type="button"
+              data-bs-toggle="modal" data-bs-target="#form-modal"
+              onclick="sendTypePackage(3,3,50,['esto','lo otro','aquello'])">
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modal para los paquetes-->
+
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="form-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content overflow-visible" style="border-radius: 20px; text-align: center">
+        <div class="position-relative pt-3">
+          <img src="../assets/logo.png" alt="logoBivraz" style="
+              position: absolute;
+              top: -35px;
+              left: calc(50% - 35px);
+            " width="70" />
+        </div>
+        <div class="modal-body" id="body-packages">
+          <form action="" id="form_packages" method="post">
+            <div class="input-group-0">
+              <div class="form-floating mb-3">
+                <h3>Paquete <span id="package-name"></span></h3>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
+                <label for="floatingInput">Nombre de usuario: </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="+53 5*******"
+                  required>
+                <label for="floatingInput">Tel&eacute;fono: </label>
+
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemple.cu"
+                  required>
+                <label for="floatingInput">Correo: </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="hidden" class="form-control" id="pacakges_type" value="" name="pacakges_type">
+              </div>
+            </div>
+            <div class="input-group-1 d-none">
+              <div class="form-floating mb-3">
+                <p>Tarjeta a transferir saldo: </p>
+              </div>
+              <div class="form-floating mb-3  d-flex justify-content-center">
+                <p class="bg-brown text-white px-4 rounded">9205 9598 7353 6263</p>
+              </div>
+              <div class="form-floating mb-3">
+                <!--    <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemple.cu"
+                  required>
+                <label for="floatingInput">Monto a transferir: </label> -->
+                <p>Monto a transferir: </p>
+              </div>
+              <div class="form-floating mb-3 d-flex justify-content-center">
+                <p class="bg-brown text-white px-4 rounded"><span id="transfer_amount"></span> CUP</p>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="transaction_number" placeholder="Numero de transacción"
+                  name="transaction_number" required maxlength="20" onkeypress="separateString(this)">
+                <label for="floatingInput">N&uacute;mero de transacci&oacute;n: </label>
+                <p style="font-size: 12px;">Tras realizar la transferencia cubacel le enviar&aacute; un
+                  SMS donde aparecer&aacute; el Nro de transacci&oacute;n el cual
+                  deber&aacute; copiar y pegar aqu&iacute; </p>
+              </div>
+            </div>
+          </form>
+
+          <div class="row input-group-2 d-none">
+            <div class="col-12">
+              <h3 class="text-center">Carrito
+                <br>
+                <i class="fa fa-shopping-cart"></i>
+              </h3>
+              <div class="pt-2">
+                <p class="text-start" style="margin-bottom: 0%;">Tienda: Bivraz</p>
+                <!-- EL nombre del usuario autenticado -->
+                <p class="text-start">Comprador: <span>Nombre</span></p>
+              </div>
+              <div class="details row py-1 px-2">
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                  <img src="/assets/pro.png" alt="" class="img-fluid" height="100%" width="100%" id="img_package">
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-center">
+                  <h4 class="shopping-text">
+                    Paquete <span id="name_pkg"></span>
+                  </h4>
+                </div>
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                  <p class="text-center text-danger" style="font-style: italic;font-size: xx-large;"
+                    data-bs-dismiss="modal"><i class="fa fa-close"></i></p>
+                </div>
+                <div class="col-6 offset-3">
+                  <ul id="list_offers">
+
+                  </ul>
+                </div>
+                <p class="col-12 tedxt-center">
+                  <small>Duraci&oacute;n: <span id="month">1</span> mes</small>
+                </p>
+              </div>
+              <div class="row  py-1 px-2">
+                <p class="mb-0">Total a pagar:</p>
+                <p class="mb-0">
+                  <strong id="value">
+                    35 CUP
+                  </strong>
+                </p>
+              </div>
+
+              <!--  <p style="font-size: 70%;" class="mt-5">
+              Tienda: <span></span>
+              </p> -->
+            </div>
+          </div>
+
+          <div class="row input-group-3 d-none">
+            <div class="col-12">
+              <h3 class="text-center">¡Gracias por comprar
+                nuestro paquete
+                <span></span>!
+              </h3>
+              <p style="font-size: 70%;" class="mt-5">La validaci&oacute;n de &eacute;ste paquete puede tardar de 1-5
+                d&iacute;as. Si excede
+                los 5 d&iacute;as contacte con soporte para solicitar la activaci&oacute;n o el
+                reembolso de su dinero</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer-customized">
+          <div class="row">
+            <div class="col-6 btn-col" data-bs-dismiss="modal" id="cancel">
+              Cancelar
+            </div>
+            <div class="col-6 btn-col" id="continue">
+              Continuar
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 999999">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto header-toast-color"><i class="fas fa-exclamation-triangle"></i> <span
+            class="title-toast"></span></strong>
+        <button type="button" class="btn-close toast-button" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <p>
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Js -->
+  <script src="../Js/popper.min.js"></script>
+  <script src="../Js/bootstrap.js"></script>
+  <script src="../Js/jquery-3.5.1.js"></script>
+  <script src="../Js/js.cookie.min.js"></script>
+  <script src="../Js/custom.js"></script>
+  <script src="../Js/packages.js"></script>
+  <script>
+    $(document).ready(function () {
+      let html = $("#body-packages").html();
+      showNotifications("notifications.html");
+      $(`#form-modal`).on("hidden.bs.modal", function () {
+        $(".modal-body#body-packages").html(html);
+        $(`#continue`).text("Continuar");
+        cont = 0;
+        counter = 4;
+      });
+      $(`#continue`).click(function (e) {
+        if (!replaceInputGroup(cont)) {
+          if (cont == 3) {
+            cont = 0;
+          } else {
+            cont++;
+          }
+        }
+      });
+      toggleNavBar();
+    });
+  </script>
+</body>
+
+</html>

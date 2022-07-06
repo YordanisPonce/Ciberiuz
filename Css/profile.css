@@ -1,0 +1,385 @@
+#home img.rounded-circle, .album-photo {
+
+    box-shadow: gray 4px 4px 5px;
+}
+
+img {
+    object-fit: cover;
+}
+
+.user-photo {
+    border: 2px solid #393a34;
+    width: fit-content;
+    padding: 10%;
+    padding-top: 7%;
+}
+
+.user-photo .fa-user {
+    font-size: 4rem;
+    color: #393a34;
+}
+
+figcaption.title-song {
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+}
+
+p.follow-song {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 1%;
+}
+
+.btn-brown {
+    background-color: #393a34;
+    color: rgb(233, 229, 229);
+}
+
+.btn-brown:hover {
+    color: white;
+    box-shadow: none;
+}
+
+.bg-brown {
+    background-color: #393a34;
+
+}
+
+.nav-tabs li {
+    width: 33.3%;
+}
+
+@media(max-width:405px) {
+    .nav-tabs li button i {
+        display: none;
+    }
+}
+
+
+.nav-tabs li button {
+    width: 100%;
+    text-align: center;
+    color: white !important;
+    background-color: #393a34 !important;
+}
+
+.col-md-7 .nav-tab {
+    width: 100%;
+}
+
+#nav-tab button {
+    text-align: center;
+    color: white !important;
+    background-color: #393a34 !important;
+    padding: 0;
+    width: 25%;
+    margin-right: 1%;
+}
+
+
+
+button.active {
+    font-weight: bold;
+
+}
+
+.name-song {
+    font-style: italic;
+}
+
+#myTabContent {
+    height: 600px;
+    overflow-y: scroll;
+}
+
+#nav-tabContent {
+    height: 240px;
+    overflow-y: scroll;
+}
+
+@media(max-width:1200px) {
+    #nav-tabContent {
+        height: 270px;
+        overflow-y: scroll;
+    }
+
+
+}
+
+.features i {
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.features i:hover {
+    color: gray;
+}
+
+.album {
+    border-bottom: .5px solid gray;
+}
+
+.content-album {
+    height: 140px;
+}
+
+.content-album:last-child {
+    overflow-y: scroll;
+}
+
+.content-album::-webkit-scrollbar {
+    display: block;
+}
+
+@media(min-width:580px) {
+    .content-album {
+        height: 180px;
+    }
+}
+
+.song {
+    background-color: #393a34c7 !important;
+    border-radius: 13px;
+    padding-bottom: 2px !important;
+}
+
+@media(max-width:400px) {
+    .song {
+        font-size: 10px;
+    }
+}
+
+.nav-link-custom {
+    width: 150px;
+    color: white;
+}
+
+.nav-link-custom:last-child {
+    margin-left: 2%;
+}
+
+#img-profile {
+    width: 220px;
+    height: 220px;
+}
+
+#edit-profile {
+    width: 40px;
+    height: 40px;
+    bottom: 5em;
+    right: .7em;
+    border: none;
+}
+
+.btn-edit {
+    padding: 8px;
+    cursor: pointer;
+    background-color: rgb(253, 151, 39);
+    transition: all .2s ease-in;
+}
+
+.btn-edit:hover {
+    background-color: rgb(250, 130, 2);
+}
+
+@media(max-width:768px) {
+    #img-profile {
+        width: 120px;
+        height: 120px;
+    }
+
+    #edit-profile {
+        width: 30px;
+        height: 30px;
+        bottom: 4em;
+        right: .6em;
+    }
+
+    .btn-edit {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+}
+
+.song-name-album {
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.song-name-album:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.features i {
+    font-size: 14px;
+}
+
+@media(max-width:1170px) {
+    .song-name-album {
+        font-size: 14px;
+    }
+}
+
+#profile-information {
+    border-left: rgba(128, 128, 128, 0.5) solid 2px;
+}
+
+div#profile-information .row .col-6 {
+    font-weight: bold;
+    height: 60px;
+    border-right: rgba(44, 30, 30, 0.5) solid 2px;
+}
+
+
+
+div#profile-information .row .col-6 p {
+    margin-bottom: 2%;
+}
+
+.description {
+    font-size: 12px;
+    width: 50%;
+    color: gray;
+}
+
+@media (max-width: 1100px) {
+    div#profile-information .row .col-6 p {
+        font-size: 12px;
+    }
+
+    div#profile-information .row .col-6 {
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 870px) {
+    div#profile-information .row .col-6 p {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: white;
+    }
+
+    .description {
+
+        width: 100%;
+    }
+}
+
+#profile-information .row .col-6:last-child {
+    border: none;
+}
+
+#profile-information img {
+    box-shadow: none !important;
+}
+
+#profile-information .row {
+    margin-left: 2%;
+}
+
+#profile-information .row:last-child {
+    border-top: rgba(128, 128, 128, 0.5) solid 2px;
+    border-bottom: rgba(128, 128, 128, 0.5) solid 2px;
+}
+
+.view-all-artist {
+    text-decoration: none;
+}
+
+.follow-text {
+    font-size: 12px;
+    font-style: italic;
+    width: 100%;
+}
+
+@media(max-width: 1070px) {
+    .follow-text {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 840px) {
+    .follow-text {
+        display: none;
+    }
+}
+
+@media(max-width: 576px) {
+    body {
+        background-color: white;
+    }
+}
+
+.reproduction-item {
+    margin-bottom: 2%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.title-reproduction-list {
+    font-size: 18px;
+    margin-bottom: 0%;
+
+
+}
+
+.top-list {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    height: 180px;
+    overflow-y: scroll;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(250, 250, 250, 0.3)
+      ),
+      url(../assets/logoParaLista.png);
+      background-color: rgb(30,30,30);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.top-list::-webkit-scrollbar {
+    display: block;
+    background-color: rgb(118, 119, 119);
+}
+
+.top-list p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    padding: .5%;
+}
+
+.top-list p span {
+    font-size: 10px;
+    opacity: 0.7;
+    transition: background-color .5s ease-in-out;
+
+}
+
+.top-list p:hover {
+    background-color: #9b9b9b59;
+    border-bottom: 1px solid transparent;
+
+}
+
+.btn-options i {
+    font-size: 18px;
+    margin: 5px;
+}

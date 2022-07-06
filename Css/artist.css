@@ -1,0 +1,228 @@
+.secondaryTitle {
+    padding-top: 1.5%;
+    padding-left: 5%;
+}
+
+@media(max-width: 576px) {
+    .modal-dialog {
+        padding: 10%;
+    }
+}
+
+@media(max-width: 768px) {
+    div.col-12 hr.d-none {
+        width: 100%;
+    }
+
+    .secondaryTitle {
+        padding-left: 0%;
+    }
+
+    .carrousel-popover a {
+        opacity: 1;
+    }
+}
+
+.card-artist {
+    background-color: #393a34;
+    color: white;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+}
+
+.card-artist header {
+    padding: .8%;
+}
+
+.row article.article::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgb(230, 219, 219);
+}
+
+.row article.article::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.row article.article::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #555;
+}
+
+.card-artist a {
+    margin-bottom: 1%;
+    text-decoration: none;
+    color: white;
+}
+
+.card-artist a:hover {
+    color: #ffffff6c;
+    transition: color .1s ease-in-out;
+}
+
+.arrows {
+    width: fit-content;
+    height: fit-content;
+    font-size: 28px;
+    border: 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.arrows:hover {
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+#controlsArtist button {
+    border: 1px solid black;
+    height: fit-content;
+    width: fit-content;
+    padding: 1%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 50%;
+}
+
+.pc_view_artist figure {
+    text-align: center;
+    font-size: small;
+    margin: 2%;
+}
+
+.cell_view_artist a {
+    font-size: x-small;
+}
+
+@media(max-width: 550px) {
+    .pc_view_artist figure figcaption {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 309px) {
+    .pc_view_artist figure figcaption {
+        display: none;
+    }
+}
+
+@media(max-width: 300px) {
+    .pc_view_artist {
+        display: none;
+    }
+
+    .cell_view_artist {
+        display: flex;
+    }
+}
+
+@media(min-width: 300px) {
+    .pc_view_artist {
+        display: flex;
+    }
+
+    .cell_view_artist {
+        display: none;
+    }
+}
+
+img.img-artist {
+    width: 70px;
+    height: 70px;
+}
+
+.pc_view_artist figure figcaption {
+    font-size: 14px;
+}
+
+@media(max-width:1000px) {
+    img.img-artist {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pc_view_artist figure figcaption {
+        font-size: 10px;
+    }
+
+}
+@media(max-width:767px) {
+    img.img-artist {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media(max-width:395px) {
+    img.img-artist {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pc_view_artist figure figcaption {
+        font-size: 10px;
+    }
+
+}
+
+
+.carrousel-popover {
+    height: fit-content;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.carrousel-popover::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgb(230, 219, 219);
+}
+
+.carrousel-popover::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+    height: 7px;
+}
+
+.carrousel-popover::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #555;
+}
+
+.carrousel-popover p {
+    margin-right: 1%;
+}
+
+figure:hover {
+    cursor: pointer;
+    color: #ffffff6c;
+    transition: color .1s ease-in-out;
+}
+
+.carrousel-popover a {
+    margin: 2%;
+    text-align: center;
+    text-decoration: none;
+    color: #393a34;
+    opacity: 0.7;
+}
+
+.carrousel-popover a:hover {
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+}
+
+.carrousel-popover a:hover img {
+    box-shadow: gray 4px 4px 6px;
+    transition: all .2s ease-in-out;
+}
