@@ -1,4 +1,10 @@
 .backContainer {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.1) 20%,
+      rgba(0, 0, 0,0.5) 40%,
+      rgb(0, 0, 0)
+    ),
+    url(../assets/login_background.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
@@ -13,6 +19,11 @@
 
 @media screen and (min-width: 600px) {
     .backContainer{
+        background:linear-gradient(-90deg,
+            rgb(0, 0, 0) 54%,
+            rgba(0, 0, 0,0.5) 70%,
+            rgba(0,0,0,0)
+          ), url(../assets/login_background.jpg);
         background-color: black;
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -26,39 +37,38 @@
     }
 }
 
-
- @media screen and (min-width: 1080px) {
-  .loginContainer{
- height: 500px;
-}
-} 
-
-.loginContainer{
-    border: 6px solid #c8bbd383;
-    border-radius: 15px;
-    text-align: center;
-    width: 500px;
-    margin: 5%;
+@media screen and (min-width: 1080px) {
+  .loginContainer {
+    height: 500px;
+  }
 }
 
-
-.loginContainer .logo{
-    width: 100px;
-    object-fit: contain;
+.loginContainer {
+  border: 6px solid #c8bbd383;
+  border-radius: 15px;
+  text-align: center;
+  width: 500px;
+  margin: 5%;
 }
 
-form i{
-    font-size: 1.6rem;
-    color: gray;
-    position: absolute;
-    left: -20px;
+
+.loginContainer .logo {
+  width: 100px;
+  object-fit: contain;
 }
 
-.loginContainer .text-input{
-    border-radius: 20px;
-    border: none;
-    padding-left: 20px;
-    width: 90%;
+form i {
+  font-size: 1.6rem;
+  color: gray;
+  position: absolute;
+  left: -20px;
+}
+
+.loginContainer .text-input {
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+  width: 90%;
 }
 
 @media(max-width: 315px) {
