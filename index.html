@@ -1,556 +1,945 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ciberiuz</title>
+		<link rel="icon" href="assets/logo.png" />
+		<link rel="stylesheet" href="Css/bootstrap.css" />
+		<link rel="stylesheet" href="fontawesome/css/all.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="Css/main.css" />
+		<link rel="stylesheet" href="Css/home.css" />
+		<link rel="stylesheet" href="jquery-fadeintoview/jquery-fadeintoview.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ciberiuz</title>
-  <link rel="icon" href="assets/logo.png">
-  <link rel="stylesheet" href="Css/bootstrap.css" />
-  <link rel="stylesheet" href="fontawesome/css/all.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="Css/main.css" />
-  <link rel="stylesheet" href="Css/home.css">
-  <link rel="stylesheet" href="jquery-fadeintoview/jquery-fadeintoview.css">
-</head>
+	<body>
+		<!-- Navbar PC view -->
+		<nav
+			class="navbar navbar-expand-md d-none d-md-block navbar-dark sticky-top"
+			style="background-color: #393a34"
+		>
+			<div class="container-fluid pe-md-4 pe-lg-5">
+				<a class="navbar-brand" href="/Ciberiuz">
+					<img src="assets/logoCiberiuz.png" alt="" width="100"
+				/></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul id="sectionsPCView" class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link activePCSection" aria-current="page" href="/"
+								><i class="fas fa-home d-sm-none d-lg-inline"></i> Inicio</a
+							>
+							<div class="activating_item"></div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="pages/list.html"
+								><i class="fas fa-music d-sm-none d-lg-inline"></i> Listas</a
+							>
+							<div class="activating_item"></div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="pages/packages.html"
+								><i class="fas fa-box-open d-sm-none d-lg-inline"></i>
+								Paquetes</a
+							>
+							<div class="activating_item"></div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="pages/artists.html"
+								><i class="fas fa-user d-sm-none d-lg-inline"></i> Artistas</a
+							>
+							<div class="activating_item"></div>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<div id="form" style="padding: 7px">
+							<input
+								type="text"
+								class="form-input"
+								placeholder="Buscar"
+								id="input_search"
+							/>
+							<i
+								class="fa fa-search"
+								style="padding: 7px; cursor: pointer"
+								id="btn_search"
+							></i>
+						</div>
+						<div
+							style="
+								border: 2px solid white;
+								border-radius: 100px;
+								padding: 3px 7px;
+							"
+						>
+							<i
+								class="fas fa-user"
+								style="font-size: 1.6rem; color: white"
+							></i>
+						</div>
+						<div class="dropdown" style="padding: 7px">
+							<a
+								class="dropdown-toggle text-white"
+								href="#"
+								role="button"
+								id="dropdownMenuLink"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+								style="text-decoration: none"
+							>
+								@username
+							</a>
 
-<body>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<li>
+									<a class="dropdown-item" href="pages/profile.html"
+										>Editar perfil</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="pages/profile.html"
+										>Estadísticas</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="pages/office.html">Compras</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="pages/profile.html"
+										>Mi cuenta</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="pages/profile.html"
+										>Administrar</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="pages/profile.html"
+										>Contáctanos</a
+									>
+								</li>
+								<li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+								<li class="py-1">
+									<hr class="dropdown-divider" />
+								</li>
+								<li>
+									<a
+										style="font-size: 0.7rem; text-align: center"
+										class="dropdown-item justify-content-center"
+										href="conditionsAndUse.html"
+										>Política de privacidad <br />
+										Términos y Condiciones</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div
+							style="color: white; padding: 7px; position: relative"
+							class="dropdown"
+						>
+							<i
+								class="fas fa-bell"
+								style="cursor: pointer"
+								id="icon_notifications"
+								tabindex="0"
+								data-bs-trigger="focus"
+								data-bs-container="body"
+								data-bs-toggle="popover"
+								data-bs-html="true"
+								data-bs-placement="bottom"
+								data-bs-content=""
+								title="Notificaciones"
+							></i>
 
-  <!-- Navbar PC view -->
-  <nav class="navbar navbar-expand-md d-none d-md-block navbar-dark sticky-top" style="background-color: #393a34">
-    <div class="container-fluid pe-md-4 pe-lg-5">
-      <a class="navbar-brand" href="/Ciberiuz"> <img src="assets/logoCiberiuz.png" alt="" width="100"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul id="sectionsPCView" class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link activePCSection" aria-current="page" href="/"><i
-                class="fas fa-home d-sm-none d-lg-inline"></i> Inicio</a>
-            <div class="activating_item"></div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/list.html"><i class="fas fa-music d-sm-none d-lg-inline"></i> Listas</a>
-            <div class="activating_item"></div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/packages.html"><i class="fas fa-box-open d-sm-none d-lg-inline"></i>
-              Paquetes</a>
-            <div class="activating_item"></div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/artists.html"><i class="fas fa-user d-sm-none d-lg-inline"></i> Artistas</a>
-            <div class="activating_item"></div>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <div id="form" style="padding: 7px;">
-            <input type="text" class="form-input" placeholder="Buscar" id="input_search" />
-            <i class="fa fa-search" style="padding: 7px;cursor: pointer;" id="btn_search"></i>
-          </div>
-          <div style="
-                border: 2px solid white;
-                border-radius: 100px;
-                padding: 3px 7px;
-              ">
-            <i class="fas fa-user" style="font-size: 1.6rem; color: white;"></i>
-          </div>
-          <div class="dropdown " style="padding: 7px;">
-            <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-              aria-expanded="false" style="text-decoration: none;">
-              @username
-            </a>
+							<span
+								class="position-absolute top-0 translate-end badge rounded-pill bg-danger"
+							>
+								9
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="pages/profile.html">Editar perfil</a></li>
-              <li><a class="dropdown-item" href="pages/profile.html">Estadísticas</a></li>
-              <li><a class="dropdown-item" href="pages/office.html">Compras</a></li>
-              <li><a class="dropdown-item" href="pages/profile.html">Mi cuenta</a></li>
-              <li><a class="dropdown-item" href="pages/profile.html">Administrar</a></li>
-              <li><a class="dropdown-item" href="pages/profile.html">Contáctanos</a></li>
-              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-              <li class="py-1">
-                <hr class="dropdown-divider">
-              </li>
-              <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center"
-                  href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+		<!-- Navbar Cell View -->
+		<nav
+			class="navbar pb-0 d-block d-md-none sticky-top"
+			style="background-color: #393a34"
+		>
+			<div
+				class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2"
+			>
+				<a class="navbar-brand" href="/">
+					<img src="assets/logoCiberiuz.png" alt="" width="100"
+				/></a>
 
-            </ul>
-          </div>
-          <div style="color: white;padding: 7px;position: relative;" class="dropdown">
-            <i class="fas fa-bell" style="cursor: pointer;" id="icon_notifications" tabindex="0" data-bs-trigger="focus"
-              data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
-              data-bs-content="" title="Notificaciones"></i>
+				<!-- Searchfield -->
+				<div class="d-flex align-items-center">
+					<div id="form">
+						<input type="text" class="form-input" placeholder="Buscar" />
+						<i class="fa fa-search"></i>
+					</div>
+					<div
+						style="
+							border: 2px solid white;
+							border-radius: 100px;
+							padding: 3px 7px;
+						"
+						class="dropdown position-relative"
+						id="cell-view"
+					>
+						<i
+							class="fas fa-user"
+							style="font-size: 1.6rem; color: white"
+							role="button"
+							id="dropdownMenuLink"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						></i>
+						<ul
+							class="dropdown-menu"
+							aria-labelledby="dropdownMenuLink"
+							id="menu-cell-view"
+						>
+							<li>
+								<a class="dropdown-item" href="pages/profile.html"
+									>Estadísticas</a
+								>
+							</li>
+							<li>
+								<a class="dropdown-item" href="pages/office.html">Compras</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="pages/profile.html">Mi cuenta</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="pages/profile.html"
+									>Administrar</a
+								>
+							</li>
+							<li>
+								<a class="dropdown-item" href="pages/profile.html"
+									>Contáctanos</a
+								>
+							</li>
+							<li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+							<li class="py-1">
+								<hr class="dropdown-divider" />
+							</li>
+							<li>
+								<a
+									style="font-size: 0.7rem; text-align: center"
+									class="dropdown-item justify-content-center"
+									href="conditionsAndUse.html"
+									>Política de privacidad <br />
+									Términos y Condiciones</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-            <span class="position-absolute top-0 translate-end badge rounded-pill bg-danger">
-              9
-            </span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </nav>
+			<!-- Sections -->
+			<ul
+				id="sectionsCellView"
+				class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-light w-100"
+				style="flex-direction: row"
+			>
+				<li class="nav-item me-4">
+					<a href="pages/packages.html"
+						><i class="fas fa-box-open" style="margin-left: 15px"></i
+					></a>
+				</li>
+				<li class="nav-item me-4">
+					<a href="pages/list.html"><i class="fas fa-music"></i></a>
+				</li>
+				<li class="nav-item me-4">
+					<a href="/"><i class="fas fa-home activeCellSection"></i></a>
+				</li>
+				<li class="nav-item me-4 position-relative" style="cursor: pointer">
+					<a href="pages/notifications.html"><i class="fas fa-bell"></i></a>
+					<span
+						class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+					>
+						9
+						<span class="visually-hidden"></span>
+					</span>
+				</li>
+				<li class="nav-item me-4">
+					<a href="pages/artists.html"><i class="fas fa-user"></i></a>
+				</li>
+			</ul>
+		</nav>
 
+		<!-- Home -->
+		<div class="px-0 px-md-4 px-lg-5">
+			<div class="container-fluid bg-white" id="home">
+				<div class="row">
+					<div class="col-12 col-sm-8 rigth-column">
+						<!-- publication for user-->
+						<section class="row bg-white" id="1">
+							<div class="col-6">
+								<img
+									src="assets/bad-bunny-gq-april-2019.jpg"
+									class="rounded-circle float-left"
+									alt="..."
+									width="40"
+									height="40"
+								/>
+								<a
+									class="username float-left song-artist-name"
+									href="pages/artists.html"
+									>@username</a
+								>
+							</div>
 
+							<div class="col-6 position-relative">
+								<div
+									class="dropdown position-absolute"
+									style="top: 0%; right: 0%"
+								>
+									<a
+										class="dropdown-toggle brow-color user_menu"
+										href="#"
+										role="button"
+										id="dropdownMenuLink"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+										style="text-decoration: none"
+									>
+										...
+									</a>
 
+									<ul
+										class="dropdown-menu brow-color"
+										aria-labelledby="dropdownMenuLink"
+									>
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li>
+											<a class="dropdown-item" href="#">Another action</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Something else here</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div
+								class="col-12 bg-primary status d-flex align-items-center justify-content-center text-white"
+							>
+								Hola mundo
+							</div>
+							<div class="col-6">
+								<p class="text-dark title_song">
+									<span class="title">Falling Down</span
+									><span class="artist"><br />XXX Tentation</span>
+								</p>
+								<input
+									type="hidden"
+									name=""
+									value="../assets/Music/Bad Bunny - Me Fui De Vacaciones _ @moreradj (_5354673502).mp3"
+								/>
+							</div>
+							<div class="col-6 text-end btn-options">
+								<i class="far fa-play-circle"></i>
+								<i class="far fa-heart"></i>
+								<i class="fa fa-share"></i>
+							</div>
+						</section>
 
-  <!-- Navbar Cell View -->
-  <nav class="navbar pb-0 d-block d-md-none sticky-top" style="background-color: #393a34">
-    <div class="navbar-dark w-100 d-flex justify-content-between align-items-center pb-3 px-2">
-      <a class="navbar-brand" href="/"> <img src="assets/logoCiberiuz.png" alt="" width="100"></a>
+						<!-- end publication for user -->
 
-      <!-- Searchfield -->
-      <div class="d-flex align-items-center">
-        <div id="form">
-          <input type="text" class="form-input" placeholder="Buscar" />
-          <i class="fa fa-search"></i>
-        </div>
-        <div style="
-              border: 2px solid white;
-              border-radius: 100px;
-              padding: 3px 7px;
-            " class="dropdown position-relative" id="cell-view">
-          <i class="fas fa-user" style="font-size: 1.6rem; color: white;" role="button" id="dropdownMenuLink"
-            data-bs-toggle="dropdown" aria-expanded="false"></i>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="menu-cell-view">
-            <li><a class="dropdown-item" href="pages/profile.html">Estadísticas</a></li>
-            <li><a class="dropdown-item" href="pages/office.html">Compras</a></li>
-            <li><a class="dropdown-item" href="pages/profile.html">Mi cuenta</a></li>
-            <li><a class="dropdown-item" href="pages/profile.html">Administrar</a></li>
-            <li><a class="dropdown-item" href="pages/profile.html">Contáctanos</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-            <li class="py-1">
-              <hr class="dropdown-divider">
-            </li>
-            <li><a style="font-size: 0.7rem; text-align: center;" class="dropdown-item justify-content-center"
-                href="conditionsAndUse.html">Política de privacidad <br> Términos y Condiciones</a></li>
+						<!-- top list publication -->
 
-          </ul>
-        </div>
+						<div class="row bg-white">
+							<div class="col-6">
+								<img
+									src="assets/bad-bunny-gq-april-2019.jpg"
+									class="rounded-circle float-left"
+									alt="..."
+									width="40"
+									height="40"
+								/>
+								<a class="username" href="pages/artists.html">
+									@username
+									<span style="font-size: 11px; opacity: 0.8"
+										><br />Ha subido 10 nuevas canciones</span
+									>
+								</a>
+							</div>
 
-      </div>
-    </div>
+							<div class="col-6 position-relative">
+								<div
+									class="dropdown position-absolute"
+									style="top: 0%; right: 0%"
+								>
+									<a
+										class="dropdown-toggle brow-color user_menu"
+										href="#"
+										role="button"
+										id="dropdownMenuLink"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+										style="text-decoration: none"
+									>
+										...
+									</a>
 
-    <!-- Sections -->
-    <ul id="sectionsCellView" class="navbar-nav py-2 pt-3 px-0 px-sm-5 border-bottom bg-light w-100"
-      style="flex-direction: row">
-      <li class="nav-item me-4">
-        <a href="pages/packages.html"><i class="fas fa-box-open" style="margin-left: 15px"></i></a>
-      </li>
-      <li class="nav-item me-4">
-        <a href="pages/list.html"><i class="fas fa-music"></i></a>
-      </li>
-      <li class="nav-item me-4">
-        <a href="/"><i class="fas fa-home activeCellSection"></i></a>
-      </li>
-      <li class="nav-item me-4 position-relative" style="cursor: pointer;">
-        <a href="pages/notifications.html"><i class="fas fa-bell"></i></a>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          9
-          <span class="visually-hidden"></span>
-        </span>
-      </li>
-      <li class="nav-item me-4">
-        <a href="pages/artists.html"><i class="fas fa-user"></i></a>
-      </li>
-    </ul>
-  </nav>
+									<ul
+										class="dropdown-menu brow-color"
+										aria-labelledby="dropdownMenuLink"
+									>
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li>
+											<a class="dropdown-item" href="#">Another action</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Something else here</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-8">
+								<p
+									class="d-flex align-items-center"
+									style="height: 100%; font-size: 12px; font-weight: bold"
+								>
+									Lista por Halloween. 10 temas, espero que les guste
+								</p>
+							</div>
+							<div
+								class="col-12 top-list align-items-center justify-content-center text-white with-scroll"
+							>
+								<p class="title_song">
+									<span class="title">Falling Down</span
+									><span><br />XXX Tentation</span>
+								</p>
+								<script>
+									for (let i = 0; i < 20; i++) {
+										document.write(
+											` <p class="title_song">Falling Down<span><br>XXX Tentation</span></p>`
+										);
+									}
+								</script>
+							</div>
+							<div class="col-12 text-center btn-options">
+								<i class="far fa-play-circle"></i>
+								<i class="far fa-heart"></i>
+								<i class="fa fa-share"></i>
+							</div>
+						</div>
 
+						<!-- end top list publication -->
 
+						<!-- last uploads -->
+						<div class="row bg-white">
+							<div class="col-12">
+								<h3 style="color: #393a34">Subidas Recientemente</h3>
+							</div>
+							<div class="col-12">
+								<div
+									id="carrousel-0"
+									class="carousel slide"
+									data-bs-ride="carousel"
+									data-bs-touch="false"
+									data-bs-interval="false"
+								>
+									<div class="carousel-inner">
+										<div class="carousel-item active position-relative">
+											<img
+												src="assets/bad-bunny-gq-april-2019.jpg"
+												class="d-block w-100"
+												alt="..."
+											/>
+											<div class="carousel-caption">
+												<div>
+													<h5>Amantes de una noche</h5>
+													<p>Bad bunny ft Natti Natasha</p>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item position-relative">
+											<img
+												src="assets/bad-bunny-gq-april-2019.jpg"
+												class="d-block w-100"
+												alt="..."
+											/>
+											<div class="carousel-caption">
+												<div>
+													<h5>Amantes de una noche</h5>
+													<p>Bad bunny ft Natti Natasha</p>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item position-relative">
+											<img
+												src="assets/bad-bunny-gq-april-2019.jpg"
+												class="d-block w-100"
+												alt="..."
+											/>
+											<div class="carousel-caption">
+												<div>
+													<h5>Amantes de una noche</h5>
+													<p>Bad bunny ft Natti Natasha</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button
+										class="carousel-control-prev"
+										type="button"
+										data-bs-target="#carrousel-0"
+										data-bs-slide="prev"
+									>
+										<i class="fa fa-angle-left"></i>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button
+										class="carousel-control-next"
+										type="button"
+										data-bs-target="#carrousel-0"
+										data-bs-slide="next"
+									>
+										<i class="fa fa-angle-right"></i>
+										<span class="visually-hidden">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--end last uploads -->
 
-  <!-- Home -->
-  <div class="px-0 px-md-4 px-lg-5">
-    <div class="container-fluid bg-white" id="home">
-      <div class="row">
-        <div class="col-12 col-sm-8 rigth-column">
-          <!-- publication for user-->
-          <section class="row bg-white" id="1">
-            <div class="col-6">
-              <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle float-left" alt="..." width="40"
-                height="40">
-              <a class="username float-left song-artist-name" href="pages/artists.html">@username</a>
-            </div>
+						<!-- artist suggestions -->
+						<div class="row bg-white position-relative artists px-0">
+							<div class="col-9">
+								<h3 style="color: #393a34; width: fit-content">
+									Sugerencias de artistas
+								</h3>
+							</div>
+							<div class="col-3 d-flex justify-content-end">
+								<a
+									href="pages/allArtist.html"
+									style="text-decoration: none; color: #393a34"
+									class="view-all"
+									>Ver todos</a
+								>
+							</div>
+							<div class="col-12 px-0">
+								<div
+									id="artistSuggestions-0"
+									class="carousel slide d-flex justify-content-center align-items-center"
+									data-bs-touch="false"
+									data-bs-interval="false"
+								>
+									<div class="carousel-inner" style="padding: 5%">
+										<div class="carousel-item active list-artist">
+											<div class="row pc_view_artist">
+												<div class="col-4 d-flex justify-content-center">
+													<figure style="text-align: center">
+														<img
+															src="assets/bad-bunny-gq-april-2019.jpg"
+															class="rounded-circle"
+															alt="..."
+															width="75"
+															height="75"
+														/>
+														<figcaption>
+															<a
+																href="#"
+																class="text-decoration-none text-brown"
+																>username</a
+															>
+														</figcaption>
+														<figcaption
+															class="follow"
+															onclick=" setFollowUnfollow(this);"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary btn-sm"
+															>
+																Seguir
+															</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-4 d-flex justify-content-center">
+													<figure style="text-align: center">
+														<img
+															src="assets/bad-bunny-gq-april-2019.jpg"
+															class="rounded-circle"
+															alt="..."
+															width="75"
+															height="75"
+														/>
+														<figcaption>
+															<a
+																href="#"
+																class="text-decoration-none text-brown"
+																>username</a
+															>
+														</figcaption>
+														<figcaption
+															class="follow"
+															onclick=" setFollowUnfollow(this);"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary btn-sm"
+															>
+																Seguir
+															</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-4 d-flex justify-content-center">
+													<figure style="text-align: center">
+														<img
+															src="assets/bad-bunny-gq-april-2019.jpg"
+															class="rounded-circle"
+															alt="..."
+															width="75"
+															height="75"
+														/>
+														<figcaption>
+															<a
+																href="#"
+																class="text-decoration-none text-brown"
+																>username</a
+															>
+														</figcaption>
+														<figcaption
+															class="follow"
+															onclick=" setFollowUnfollow(this);"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary btn-sm"
+															>
+																Seguir
+															</button>
+														</figcaption>
+													</figure>
+												</div>
+											</div>
+											<div class="row d-none cell_view_artist">
+												<div
+													class="col-6 d-flex justify-content-center mx-auto"
+												>
+													<figure style="text-align: center">
+														<img
+															src="assets/bad-bunny-gq-april-2019.jpg"
+															class="rounded-circle"
+															alt="..."
+															width="75"
+															height="75"
+														/>
+														<figcaption>
+															<a
+																href="#"
+																class="text-decoration-none text-brown"
+																>username</a
+															>
+														</figcaption>
+														<figcaption
+															class="follow"
+															onclick=" setFollowUnfollow(this);"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary btn-sm"
+															>
+																Seguir
+															</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div
+													class="col-6 d-flex justify-content-center mx-auto"
+												>
+													<figure style="text-align: center">
+														<img
+															src="assets/bad-bunny-gq-april-2019.jpg"
+															class="rounded-circle"
+															alt="..."
+															width="75"
+															height="75"
+														/>
+														<figcaption>
+															<a
+																href="#"
+																class="text-decoration-none text-brown"
+																>username</a
+															>
+														</figcaption>
+														<figcaption
+															class="follow"
+															onclick=" setFollowUnfollow(this);"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary btn-sm"
+															>
+																Seguir
+															</button>
+														</figcaption>
+													</figure>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button
+										class="carousel-control-prev carousel-control"
+										type="button"
+										data-bs-target="#artistSuggestions-0"
+										data-bs-slide="prev"
+									>
+										<i class="fa fa-angle-left"></i>
+										<span class="visually-hidden"></span>
+									</button>
+									<button
+										class="carousel-control-next carousel-control"
+										type="button"
+										data-bs-target="#artistSuggestions-0"
+										data-bs-slide="next"
+									>
+										<i class="fa fa-angle-right"></i>
+										<span class="visually-hidden"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--end artist suggestions -->
+						<!-- end publications -->
+					</div>
 
-            <div class="col-6 position-relative">
-              <div class="dropdown position-absolute" style="top: 0%;right: 0%;">
-                <a class="dropdown-toggle brow-color user_menu" href="#" role="button" id="dropdownMenuLink"
-                  data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
-                  ...
-                </a>
+					<div class="col-12 col-sm-4 vh-100 d-none d-sm-block">
+						<div class="left-column">
+							<p><i class="fa fa-list"></i> &Uacute;ltimas reproducidas</p>
+							<hr width="100%" />
+							<p>
+								<i class="far fa-play-circle" style="margin-right: 5px"></i>
+								Bad Bunny && Becky G - Amantes
+							</p>
+							<p>
+								<i class="far fa-play-circle" style="margin-right: 5px"></i
+								>Chocolate - Una noche más
+							</p>
+							<p>
+								<i class="far fa-play-circle" style="margin-right: 5px"></i>
+								Anuel - Bubalu
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a
+			class="btn-flotante rounded-circle d-flex justify-content-center align-items-center"
+			href="Ciberiuz/pages/uploadFile.html"
+		>
+			<i class="fa fa-plus"></i>
+		</a>
+		<a
+			id="MusicPlayerButton"
+			class="float-music-player-button rounded-circle d-flex justify-content-center align-items-center"
+		>
+			<i class="fa fa-play"></i>
+		</a>
+		<!-- Music Player -->
+		<div
+			class="music-player-container music-player-container-hidden"
+			id="MusicPlayerContainer"
+		>
+			<i
+				class="fa fa-angle-up text-white"
+				style="cursor: pointer; font-size: 1.3rem"
+				id="closeButton"
+			></i>
+			<!-- Header -->
+			<div class="row align-self-start ms-4 ms-sm-5 ms-md-3" style="width: 88%">
+				<div class="col-3 ps-0 d-flex align-items-end">
+					<img
+						class="rounded-circle"
+						src="assets/fondogeneros.png"
+						height="50"
+						width="50"
+						alt=""
+						id="img_music"
+					/>
+				</div>
+				<div class="col-9 px-0">
+					<div class="title-music-container">
+						<h4 class="song-title overflow-hidden" id="songTitle"></h4>
+						<span class="song-author overflow-hidden" id="songArtist"
+							>La lista de reproducci&oacute;n actualmente est&aacute;
+							vac&iacute;a</span
+						>
+					</div>
+				</div>
+			</div>
+			<!-- ---------------- -->
+			<!-- Audio source -->
+			<audio controls preload="metadata" src="" id="audio"></audio>
 
-                <ul class="dropdown-menu brow-color" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 bg-primary status  d-flex align-items-center justify-content-center text-white">
-              Hola mundo
-            </div>
-            <div class="col-6">
-              <p class="text-dark title_song"><span class="title">Falling Down</span><span class="artist"><br>XXX
-                  Tentation</span></p>
-              <input type="hidden" name=""
-                value="../assets/Music/Bad Bunny - Me Fui De Vacaciones _ @moreradj (_5354673502).mp3">
-            </div>
-            <div class="col-6 text-end btn-options">
-              <i class="far fa-play-circle"></i>
-              <i class="far fa-heart "></i>
-              <i class="fa fa-share"></i>
-            </div>
-          </section>
+			<!-- Controls -->
+			<div class="main-song-controls mt-2">
+				<i class="fa fa-list icon" id="playlistButton"></i>
+				<i class="fa fa-backward-step icon" id="BackwardStep"></i>
+				<i class="fa fa-play icon" id="PlayPause"></i>
+				<i class="fa fa-forward-step icon" id="FowardStep"></i>
+				<i
+					class="material-icons icon"
+					style="font-size: 1.8rem"
+					id="RandomRepeat"
+					>repeat</i
+				>
+			</div>
+			<!-- Playlist -->
+			<div class="playlist playlist-hidden" id="playlist">
+				<div
+					class="playlist-container h-100 px-1 m-2 pb-2"
+					style="overflow-y: scroll"
+					id="playlist-container"
+				>
+					<!-- Generated with js -->
+				</div>
+			</div>
+		</div>
 
-          <!-- end publication for user -->
-
-          <!-- top list publication -->
-
-
-          <div class="row bg-white">
-            <div class="col-6">
-              <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle float-left" alt="..." width="40"
-                height="40">
-              <a class="username" href="pages/artists.html">
-                @username
-                <span style="font-size: 11px;opacity: 0.8;"><br>Ha subido 10 nuevas canciones</span>
-              </a>
-            </div>
-
-            <div class="col-6 position-relative">
-              <div class="dropdown position-absolute" style="top: 0%;right: 0%;">
-                <a class="dropdown-toggle brow-color user_menu" href="#" role="button" id="dropdownMenuLink"
-                  data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
-                  ...
-                </a>
-
-                <ul class="dropdown-menu brow-color" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-8">
-              <p class=" d-flex align-items-center" style="height: 100%; font-size: 12px;font-weight: bold;">Lista por
-                Halloween. 10 temas, espero que les guste</p>
-            </div>
-            <div class="col-12 top-list align-items-center justify-content-center text-white with-scroll">
-              <p class="title_song"><span class="title">Falling Down</span><span><br>XXX Tentation</span></p>
-              <script>
-                for (let i = 0; i < 20; i++) {
-                  document.write(` <p class="title_song">Falling Down<span><br>XXX Tentation</span></p>`);
-
-                }
-              </script>
-            </div>
-            <div class="col-12 text-center btn-options">
-              <i class="far fa-play-circle"></i>
-              <i class="far fa-heart"></i>
-              <i class="fa fa-share"></i>
-            </div>
-          </div>
-
-          <!-- end top list publication -->
-
-
-
-          <!-- last uploads -->
-          <div class="row bg-white">
-            <div class="col-12">
-              <h3 style="color: #393a34;">Subidas Recientemente</h3>
-            </div>
-            <div class="col-12">
-              <div id="carrousel-0" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false"
-                data-bs-interval="false">
-                <div class="carousel-inner">
-                  <div class="carousel-item active position-relative">
-                    <img src="assets/bad-bunny-gq-april-2019.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption">
-                      <div>
-                        <h5>Amantes de una noche</h5>
-                        <p>Bad bunny ft Natti Natasha</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="assets/bad-bunny-gq-april-2019.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption">
-                      <div>
-                        <h5>Amantes de una noche</h5>
-                        <p>Bad bunny ft Natti Natasha</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="assets/bad-bunny-gq-april-2019.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption">
-                      <div>
-                        <h5>Amantes de una noche</h5>
-                        <p>Bad bunny ft Natti Natasha</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carrousel-0" data-bs-slide="prev">
-                  <i class="fa fa-angle-left"></i>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carrousel-0" data-bs-slide="next">
-                  <i class="fa fa-angle-right"></i>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!--end last uploads -->
-
-          <!-- artist suggestions -->
-          <div class="row bg-white position-relative artists px-0">
-            <div class="col-9">
-              <h3 style="color: #393a34;width: fit-content;">Sugerencias de artistas</h3>
-            </div>
-            <div class="col-3 d-flex justify-content-end">
-              <a href="pages/allArtist.html" style="text-decoration: none;color: #393a34;" class="view-all">Ver
-                todos</a>
-            </div>
-            <div class="col-12 px-0">
-              <div id="artistSuggestions-0" class="carousel slide d-flex justify-content-center align-items-center"
-                data-bs-touch="false" data-bs-interval="false">
-                <div class="carousel-inner" style="padding: 5%;">
-                  <div class="carousel-item active list-artist">
-                    <div class="row pc_view_artist">
-                      <div class="col-4 d-flex  justify-content-center">
-                        <figure style="text-align: center;">
-                          <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle" alt="..." width="75"
-                            height="75">
-                          <figcaption><a href="#" class="text-decoration-none text-brown">username</a></figcaption>
-                          <figcaption class="follow" onclick=" setFollowUnfollow(this);"><button type="button"
-                              class="btn btn-secondary btn-sm">Seguir</button>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="col-4 d-flex  justify-content-center">
-                        <figure style="text-align: center;">
-                          <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle" alt="..." width="75"
-                            height="75">
-                          <figcaption><a href="#" class="text-decoration-none text-brown">username</a></figcaption>
-                          <figcaption class="follow" onclick=" setFollowUnfollow(this);"><button type="button"
-                              class="btn btn-secondary btn-sm">Seguir</button>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="col-4 d-flex  justify-content-center">
-                        <figure style="text-align: center;">
-                          <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle" alt="..." width="75"
-                            height="75">
-                          <figcaption><a href="#" class="text-decoration-none text-brown">username</a></figcaption>
-                          <figcaption class="follow" onclick=" setFollowUnfollow(this);"><button type="button"
-                              class="btn btn-secondary btn-sm">Seguir</button>
-                          </figcaption>
-                        </figure>
-                      </div>
-                    </div>
-                    <div class="row d-none cell_view_artist">
-                      <div class="col-6 d-flex  justify-content-center mx-auto">
-                        <figure style="text-align: center;">
-                          <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle" alt="..." width="75"
-                            height="75">
-                          <figcaption><a href="#" class="text-decoration-none text-brown">username</a></figcaption>
-                          <figcaption class="follow" onclick=" setFollowUnfollow(this);"><button type="button"
-                              class="btn btn-secondary btn-sm">Seguir</button>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="col-6 d-flex  justify-content-center mx-auto">
-                        <figure style="text-align: center;">
-                          <img src="assets/bad-bunny-gq-april-2019.jpg" class="rounded-circle" alt="..." width="75"
-                            height="75">
-                          <figcaption><a href="#" class="text-decoration-none text-brown">username</a></figcaption>
-                          <figcaption class="follow" onclick=" setFollowUnfollow(this);"><button type="button"
-                              class="btn btn-secondary btn-sm">Seguir</button>
-                          </figcaption>
-                        </figure>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <button class="carousel-control-prev carousel-control" type="button"
-                  data-bs-target="#artistSuggestions-0" data-bs-slide="prev">
-                  <i class="fa fa-angle-left"></i>
-                  <span class="visually-hidden"></span>
-                </button>
-                <button class="carousel-control-next carousel-control" type="button"
-                  data-bs-target="#artistSuggestions-0" data-bs-slide="next">
-                  <i class="fa fa-angle-right"></i>
-                  <span class="visually-hidden"></span>
-                </button>
-              </div>
-
-            </div>
-          </div>
-          <!--end artist suggestions -->
-          <!-- end publications -->
-        </div>
-
-        <div class="col-12 col-sm-4 vh-100 d-none d-sm-block">
-
-          <div class="left-column">
-            <p><i class="fa fa-list"></i> &Uacute;ltimas reproducidas</p>
-            <hr width="100%">
-            <p>
-              <i class="far fa-play-circle" style="margin-right: 5px;"></i>
-              Bad Bunny && Becky G - Amantes
-            </p>
-            <p><i class="far fa-play-circle" style="margin-right: 5px;"></i>Chocolate - Una noche más</p>
-            <p><i class="far fa-play-circle" style="margin-right: 5px;"></i> Anuel - Bubalu</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="btn-flotante rounded-circle d-flex justify-content-center align-items-center" href="Ciberiuz/pages/uploadFile.html">
-    <i class="fa fa-plus"></i>
-  </a>
-  <a id="MusicPlayerButton"
-    class="float-music-player-button rounded-circle d-flex justify-content-center align-items-center">
-    <i class="fa fa-play "></i>
-  </a>
-  <!-- Music Player -->
-  <div class="music-player-container music-player-container-hidden " id="MusicPlayerContainer">
-    <i class="fa fa-angle-up text-white" style="cursor: pointer; font-size: 1.3rem;" id="closeButton"></i>
-    <!-- Header -->
-    <div class="row w-75 align-self-start ms-4 ms-sm-5 ms-md-3">
-      <div class="col-3 d-flex align-items-end">
-        <img class="rounded-circle" src="assets/fondogeneros.png" height="50" width="50" alt="" id="img_music">
-      </div>
-      <div class="col-9">
-        <div class="title-music-container">
-          <h4 class="song-title overflow-hidden" id="songTitle"></h4>
-          <span class="song-author overflow-hidden" id="songArtist">La lsta de reproducci&oacute;n actualmente
-            est&aacute; vac&iacute;a</span>
-        </div>
-      </div>
-    </div>
-    <!-- ---------------- -->
-    <!-- Audio source -->
-    <audio controls preload="metadata" src='' id="audio"></audio>
-
-    <!-- Controls -->
-    <div class="main-song-controls mt-2">
-      <i class="fa fa-list icon" id="playlistButton"></i>
-      <i class="fa fa-backward-step icon" id="BackwardStep"></i>
-      <i class="fa fa-play icon" id="PlayPause"></i>
-      <i class="fa fa-forward-step icon" id="FowardStep"></i>
-      <i class="material-icons icon" style="font-size: 1.8rem;" id="RandomRepeat">repeat</i>
-    </div>
-    <!-- Playlist -->
-    <div class="playlist playlist-hidden" id="playlist">
-      <div class="playlist-container h-100 px-1 m-2 pb-2" style="overflow-y: scroll;" id="playlist-container">
-        <!-- Generated with js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Fav musical genders modal -->
-  <div class="modal fade" id="musicalGendersModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);"
-    aria-modal="true" role="dialog">
-    <div class="modal-dialog px-0 py-0 modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header py-3 px-3 text-white" style="background-color: #393A34;">
-          <div class="modal-title fw-bolder" id="exampleModalLabel">
-            <h3>Escoger géneros favoritos</h3>
-          </div>
-          <button type="button" id="acceptGendersButton" class="btn text-white fw-bolder" data-bs-dismiss="modal"
-            style="font-size: 28px;box-shadow: none;"><i class="fa fa-check check-genders"></i> <span
-              class="acept-genders">Aceptar</span></button>
-        </div>
-        <div class="modal-body">
-          <div class="row justify-content-center">
-            <script>
-              for (let i = 0; i < 500; i++) {
-                document.write(`
+		<!-- Fav musical genders modal -->
+		<div
+			class="modal fade"
+			id="musicalGendersModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			style="
+				background-color: rgba(0, 0, 0, 0.5);
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+			"
+			aria-modal="true"
+			role="dialog"
+		>
+			<div class="modal-dialog px-0 py-0 modal-fullscreen">
+				<div class="modal-content">
+					<div
+						class="modal-header py-3 px-3 text-white"
+						style="background-color: #393a34"
+					>
+						<div class="modal-title fw-bolder" id="exampleModalLabel">
+							<h3>Escoger géneros favoritos</h3>
+						</div>
+						<button
+							type="button"
+							id="acceptGendersButton"
+							class="btn text-white fw-bolder"
+							data-bs-dismiss="modal"
+							style="font-size: 28px; box-shadow: none"
+						>
+							<i class="fa fa-check check-genders"></i>
+							<span class="acept-genders">Aceptar</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row justify-content-center">
+							<script>
+								for (let i = 0; i < 500; i++) {
+									document.write(`
                 <div class="fav-musical-gender m-2 d-flex justify-content-center align-items-center rounded-circle" id="${i}" >
                  <p class="name-gender">Cumbia</p>
                 </div>
-                `)
+                `);
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Generos fav modal -->
 
-              }
-            </script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--End Generos fav modal -->
+		<button
+			type="button"
+			class="btn btn-primary d-none"
+			id="liveToastBtn"
+		></button>
+		<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 999999">
+			<div
+				id="liveToast"
+				class="toast hide"
+				role="alert"
+				aria-live="assertive"
+				aria-atomic="true"
+			>
+				<div class="toast-header">
+					<strong class="me-auto text-danger"
+						><i class="fas fa-exclamation-triangle"></i>
+						<span class="title-toast">Sin seleccionar elementos</span></strong
+					>
+					<button
+						type="button"
+						class="btn-close toast-button"
+						data-bs-dismiss="toast"
+						aria-label="Close"
+					></button>
+				</div>
+				<div class="toast-body">
+					<p>Debe escoger al menos 1 g&eacute;nero musical</p>
+				</div>
+			</div>
+		</div>
 
+		<!-- Js -->
+		<script src="Js/popper.min.js"></script>
+		<script src="Js/bootstrap.js"></script>
+		<script src="Js/jquery-3.5.1.js"></script>
+		<script src="./Js/js.cookie.min.js"></script>
+		<script src="Js/custom.js"></script>
+		<script src="./Js/music-player.js"></script>
+		<script src="jquery-fadeintoview/jquery-fadeintoview.js"></script>
 
-  <button type="button" class="btn btn-primary d-none" id="liveToastBtn"></button>
-  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 999999">
-    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="me-auto text-danger"><i class="fas fa-exclamation-triangle"></i> <span class="title-toast">Sin
-            seleccionar elementos</span></strong>
-        <button type="button" class="btn-close toast-button" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        <p>
-          Debe escoger al menos 1 g&eacute;nero musical
-        </p>
-      </div>
-    </div>
-  </div>
+		<script>
+			$(document).ready(function () {
+				responsiveDesign();
 
-
-  <!-- Js -->
-  <script src="Js/popper.min.js"></script>
-  <script src="Js/bootstrap.js"></script>
-  <script src="Js/jquery-3.5.1.js"></script>
-  <script src="./Js/js.cookie.min.js"></script>
-  <script src="Js/custom.js"></script>
-  <script src="./Js/music-player.js"></script>
-  <script src="jquery-fadeintoview/jquery-fadeintoview.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      responsiveDesign();
-      $(`.fa-heart`).click(function (e) {
-        likeMe(this);
-        e.preventDefault();
-      });
-      let songs = [
-        { id: 1, title: 'Amor Foda', artist: 'Bad Bunny', img: '../assets/images/bad-bunny-gq-april-2019.jpg', song: '../assets/Music/Bad Bunny - Amor Foda .mp3' },
-
-        { id: 2, title: 'Titi me pregunto', artist: 'Bad Bunny', img: '../assets/images/1.jpg', song: '../assets/Music/Bad Bunny - Tití Me Preguntó _ @moreradj (_5354673502).mp3' },
-
-        { id: 3, title: 'Moscow', artist: 'Bad Bunny', img: '../assets/images/2.jpg', song: '../assets/Music/Bad Bunny - Moscow Mule _ @moreradj (_5354673502) (1).mp3' },
-
-        { id: 4, title: 'Me fui de vacaciones ', artist: 'Bad Bunny', img: '../assets/images/3.jpg', song: '../assets/Music/Bad Bunny - Me Fui De Vacaciones _ @moreradj (_5354673502).mp3' },
-
-        { id: 5, title: 'Te mudaste', artist: 'Bad Bunny', img: '../assets/images/4.jpg', song: '../assets/Music/BAD BUNNY - TE MUDASTE  EL ÚLTIMO TOUR DEL MUNDO [Visualizer].mp3' },
-      ]
-    
-      showNotifications("pages/notifications.html");
-
-      loadingFiles(songs);
-      let gender = Cookies.get("genders");
-      if (typeof gender === 'undefined') {
-        //Metodo para mostrar la lista con generos favoritos
-        //Solo pon la url por parametro
-        sendFavoritesGenders('https://domain.com');
-      }
-      window.oncontextmenu = () => {
-
-         return false; 
-      }
-    });
-  </script>
+				$(`.fa-heart`).click(function (e) {
+					e.preventDefault();
+					likeMe(this);
+				});
 
 
-</body>
+				showNotifications("pages/notifications.html");
 
+				let gender = Cookies.get("genders");
+				if (typeof gender === "undefined") {
+					//Metodo para mostrar la lista con generos favoritos
+					//Solo pon la url por parametro
+					sendFavoritesGenders("https://domain.com");
+				}
+
+				//To disable de right click
+				// window.oncontextmenu = () => {
+				// 	return false;
+				// };
+			});
+		</script>
+	</body>
 </html>
