@@ -237,10 +237,11 @@ const refreshPlaylist = (currentSongId) => {
 refreshPlaylist(songs[0].id)
 
 
-let addPlaylistButtons = document.getElementsByClassName("fa-play-circle");
+let addPlaylistButtons = document.getElementsByClassName("playable-song");
 
 for (let i = 0; i < addPlaylistButtons.length; i++) {
     addPlaylistButtons[i].addEventListener("click", (e) => {
+        console.log('Play music');
         //TODO: peticion fetch que devuelve la lista con las canciones, llamas a la funcion load y le pasas el json con la info
         //Nota: hay que ponerle algun atributo a cada elemento html para saber que canciones se piden
         //Ejemplo hipotetico:
