@@ -1,1 +1,1 @@
-Bivraz Social Network Front-End  
+Ciberiuz Social Network Front-End  
