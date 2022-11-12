@@ -49,26 +49,6 @@ function loadingFiles(songs) {
 
 
         })
-
-        $(`i.far`).click(function (e) {
-            setIconPlayPause(this);
-            let parent = $(this).closest('section').attr("id");
-            console.log(parent);
-            let song = {
-              id: parent,
-              title: $(`#${parent} .title`).text(),
-              artist: $(`#${parent} .song-artist-name`).text(),
-              img: $(`#${parent} img`).attr("src"),
-              song: $(`#${parent} input`).val(),
-            }
-    
-            if (audio.paused) {
-              audio.play();
-            }else{
-              audio.pause();
-            }
-    
-          });
         
         //Random, repeat or repeat once 
         randomRepeat.addEventListener('click', () => {
